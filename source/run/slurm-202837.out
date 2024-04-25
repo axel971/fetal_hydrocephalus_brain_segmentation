@@ -1,0 +1,1090 @@
+U-Net
+[33mWARNING:[0m NVIDIA binaries may not be bound with --writable
+2021-11-30 09:53:54.053522: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+..data size:(40, 117, 159, 126)
+2021-11-30 09:53:59.428533: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcuda.so.1
+2021-11-30 09:53:59.482949: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: A100-PCIE-40GB computeCapability: 8.0
+coreClock: 1.41GHz coreCount: 108 deviceMemorySize: 39.59GiB deviceMemoryBandwidth: 1.41TiB/s
+2021-11-30 09:53:59.482990: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2021-11-30 09:53:59.489774: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublas.so.11
+2021-11-30 09:53:59.489864: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublasLt.so.11
+2021-11-30 09:53:59.492656: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcufft.so.10
+2021-11-30 09:53:59.493306: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcurand.so.10
+2021-11-30 09:53:59.494135: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusolver.so.11
+2021-11-30 09:53:59.495310: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusparse.so.11
+2021-11-30 09:53:59.495766: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudnn.so.8
+2021-11-30 09:53:59.499629: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0
+2021-11-30 09:53:59.504518: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:3b:00.0 name: A100-PCIE-40GB computeCapability: 8.0
+coreClock: 1.41GHz coreCount: 108 deviceMemorySize: 39.59GiB deviceMemoryBandwidth: 1.41TiB/s
+2021-11-30 09:53:59.507974: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0
+2021-11-30 09:53:59.508013: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2021-11-30 09:53:59.984309: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-11-30 09:53:59.984374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 
+2021-11-30 09:53:59.984387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N 
+2021-11-30 09:53:59.990327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 38184 MB memory) -> physical GPU (device: 0, name: A100-PCIE-40GB, pci bus id: 0000:3b:00.0, compute capability: 8.0)
+..loading data finished
+---------fold--1---------
+training set:  [ 8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+training set size:  32
+testing set:  [0 1 2 3 4 5 6 7]
+testing set size:  8
+..generator_len: 400
+..training_n_subject: 32
+..training_n_patch_per_sub: 326592
+2021-11-30 09:54:01.647228: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2021-11-30 09:54:01.647705: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 2100000000 Hz
+2021-11-30 09:54:03.709329: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudnn.so.8
+2021-11-30 09:54:04.642456: I tensorflow/stream_executor/cuda/cuda_dnn.cc:380] Loaded cuDNN version 8202
+2021-11-30 09:54:05.584775: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublas.so.11
+2021-11-30 09:54:06.321134: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublasLt.so.11
+Epoch 1/100
+400/400 - 157s - loss: 0.1207 - dice_for_iVOI: 0.4667
+Epoch 2/100
+400/400 - 125s - loss: 0.0613 - dice_for_iVOI: 0.6841
+Epoch 3/100
+400/400 - 125s - loss: 0.0424 - dice_for_iVOI: 0.7873
+Epoch 4/100
+400/400 - 125s - loss: 0.0348 - dice_for_iVOI: 0.8216
+Epoch 5/100
+400/400 - 125s - loss: 0.0221 - dice_for_iVOI: 0.8823
+Epoch 6/100
+400/400 - 124s - loss: 0.0177 - dice_for_iVOI: 0.9045
+Epoch 7/100
+400/400 - 124s - loss: 0.0217 - dice_for_iVOI: 0.8872
+Epoch 8/100
+400/400 - 124s - loss: 0.0221 - dice_for_iVOI: 0.8873
+Epoch 9/100
+400/400 - 125s - loss: 0.0152 - dice_for_iVOI: 0.9176
+Epoch 10/100
+400/400 - 124s - loss: 0.0143 - dice_for_iVOI: 0.9218
+Epoch 11/100
+400/400 - 125s - loss: 0.0131 - dice_for_iVOI: 0.9277
+Epoch 12/100
+400/400 - 124s - loss: 0.0128 - dice_for_iVOI: 0.9279
+Epoch 13/100
+400/400 - 125s - loss: 0.0126 - dice_for_iVOI: 0.9308
+Epoch 14/100
+400/400 - 124s - loss: 0.0125 - dice_for_iVOI: 0.9324
+Epoch 15/100
+400/400 - 124s - loss: 0.0221 - dice_for_iVOI: 0.8889
+Epoch 16/100
+400/400 - 124s - loss: 0.0146 - dice_for_iVOI: 0.9240
+Epoch 17/100
+400/400 - 124s - loss: 0.0241 - dice_for_iVOI: 0.8790
+Epoch 18/100
+400/400 - 124s - loss: 0.0136 - dice_for_iVOI: 0.9255
+Epoch 19/100
+400/400 - 124s - loss: 0.0123 - dice_for_iVOI: 0.9324
+Epoch 20/100
+400/400 - 125s - loss: 0.0118 - dice_for_iVOI: 0.9346
+Epoch 21/100
+400/400 - 125s - loss: 0.0114 - dice_for_iVOI: 0.9365
+Epoch 22/100
+400/400 - 124s - loss: 0.0113 - dice_for_iVOI: 0.9388
+Epoch 23/100
+400/400 - 124s - loss: 0.0112 - dice_for_iVOI: 0.9371
+Epoch 24/100
+400/400 - 124s - loss: 0.0106 - dice_for_iVOI: 0.9383
+Epoch 25/100
+400/400 - 124s - loss: 0.0106 - dice_for_iVOI: 0.9402
+Epoch 26/100
+400/400 - 124s - loss: 0.0188 - dice_for_iVOI: 0.9011
+Epoch 27/100
+400/400 - 125s - loss: 0.0117 - dice_for_iVOI: 0.9340
+Epoch 28/100
+400/400 - 124s - loss: 0.0112 - dice_for_iVOI: 0.9368
+Epoch 29/100
+400/400 - 124s - loss: 0.0172 - dice_for_iVOI: 0.9157
+Epoch 30/100
+400/400 - 125s - loss: 0.0122 - dice_for_iVOI: 0.9341
+Epoch 31/100
+400/400 - 125s - loss: 0.0115 - dice_for_iVOI: 0.9392
+Epoch 32/100
+400/400 - 124s - loss: 0.0107 - dice_for_iVOI: 0.9409
+Epoch 33/100
+400/400 - 125s - loss: 0.0103 - dice_for_iVOI: 0.9424
+Epoch 34/100
+400/400 - 124s - loss: 0.0101 - dice_for_iVOI: 0.9438
+Epoch 35/100
+400/400 - 125s - loss: 0.0104 - dice_for_iVOI: 0.9447
+Epoch 36/100
+400/400 - 125s - loss: 0.0099 - dice_for_iVOI: 0.9447
+Epoch 37/100
+400/400 - 124s - loss: 0.0100 - dice_for_iVOI: 0.9434
+Epoch 38/100
+400/400 - 124s - loss: 0.0098 - dice_for_iVOI: 0.9459
+Epoch 39/100
+400/400 - 124s - loss: 0.0102 - dice_for_iVOI: 0.9438
+Epoch 40/100
+400/400 - 124s - loss: 0.0098 - dice_for_iVOI: 0.9471
+Epoch 41/100
+400/400 - 124s - loss: 0.0097 - dice_for_iVOI: 0.9461
+Epoch 42/100
+400/400 - 124s - loss: 0.0116 - dice_for_iVOI: 0.9357
+Epoch 43/100
+400/400 - 124s - loss: 0.0097 - dice_for_iVOI: 0.9476
+Epoch 44/100
+400/400 - 124s - loss: 0.0092 - dice_for_iVOI: 0.9493
+Epoch 45/100
+400/400 - 124s - loss: 0.0091 - dice_for_iVOI: 0.9480
+Epoch 46/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9483
+Epoch 47/100
+400/400 - 125s - loss: 0.0093 - dice_for_iVOI: 0.9483
+Epoch 48/100
+400/400 - 125s - loss: 0.0090 - dice_for_iVOI: 0.9495
+Epoch 49/100
+400/400 - 124s - loss: 0.0093 - dice_for_iVOI: 0.9474
+Epoch 50/100
+400/400 - 125s - loss: 0.0139 - dice_for_iVOI: 0.9282
+Epoch 51/100
+400/400 - 125s - loss: 0.0100 - dice_for_iVOI: 0.9472
+Epoch 52/100
+400/400 - 125s - loss: 0.0090 - dice_for_iVOI: 0.9483
+Epoch 53/100
+400/400 - 125s - loss: 0.0090 - dice_for_iVOI: 0.9497
+Epoch 54/100
+400/400 - 125s - loss: 0.0090 - dice_for_iVOI: 0.9518
+Epoch 55/100
+400/400 - 125s - loss: 0.0088 - dice_for_iVOI: 0.9514
+Epoch 56/100
+400/400 - 125s - loss: 0.0089 - dice_for_iVOI: 0.9512
+Epoch 57/100
+400/400 - 125s - loss: 0.0088 - dice_for_iVOI: 0.9523
+Epoch 58/100
+400/400 - 124s - loss: 0.0087 - dice_for_iVOI: 0.9522
+Epoch 59/100
+400/400 - 125s - loss: 0.0086 - dice_for_iVOI: 0.9526
+Epoch 60/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9526
+Epoch 61/100
+400/400 - 124s - loss: 0.0086 - dice_for_iVOI: 0.9528
+Epoch 62/100
+400/400 - 124s - loss: 0.0085 - dice_for_iVOI: 0.9525
+Epoch 63/100
+400/400 - 124s - loss: 0.0086 - dice_for_iVOI: 0.9537
+Epoch 64/100
+400/400 - 124s - loss: 0.0088 - dice_for_iVOI: 0.9524
+Epoch 65/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9543
+Epoch 66/100
+400/400 - 124s - loss: 0.0082 - dice_for_iVOI: 0.9525
+Epoch 67/100
+400/400 - 124s - loss: 0.0175 - dice_for_iVOI: 0.9094
+Epoch 68/100
+400/400 - 124s - loss: 0.0109 - dice_for_iVOI: 0.9396
+Epoch 69/100
+400/400 - 124s - loss: 0.0093 - dice_for_iVOI: 0.9485
+Epoch 70/100
+400/400 - 125s - loss: 0.0087 - dice_for_iVOI: 0.9499
+Epoch 71/100
+400/400 - 124s - loss: 0.0087 - dice_for_iVOI: 0.9521
+Epoch 72/100
+400/400 - 124s - loss: 0.0083 - dice_for_iVOI: 0.9527
+Epoch 73/100
+400/400 - 124s - loss: 0.0128 - dice_for_iVOI: 0.9343
+Epoch 74/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9475
+Epoch 75/100
+400/400 - 124s - loss: 0.0089 - dice_for_iVOI: 0.9510
+Epoch 76/100
+400/400 - 125s - loss: 0.0083 - dice_for_iVOI: 0.9539
+Epoch 77/100
+400/400 - 124s - loss: 0.0089 - dice_for_iVOI: 0.9522
+Epoch 78/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9532
+Epoch 79/100
+400/400 - 124s - loss: 0.0080 - dice_for_iVOI: 0.9554
+Epoch 80/100
+400/400 - 125s - loss: 0.0081 - dice_for_iVOI: 0.9538
+Epoch 81/100
+400/400 - 124s - loss: 0.0081 - dice_for_iVOI: 0.9549
+Epoch 82/100
+400/400 - 124s - loss: 0.0082 - dice_for_iVOI: 0.9549
+Epoch 83/100
+400/400 - 124s - loss: 0.0080 - dice_for_iVOI: 0.9551
+Epoch 84/100
+400/400 - 124s - loss: 0.0079 - dice_for_iVOI: 0.9548
+Epoch 85/100
+400/400 - 124s - loss: 0.0078 - dice_for_iVOI: 0.9559
+Epoch 86/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9551
+Epoch 87/100
+400/400 - 125s - loss: 0.0080 - dice_for_iVOI: 0.9554
+Epoch 88/100
+400/400 - 124s - loss: 0.0078 - dice_for_iVOI: 0.9560
+Epoch 89/100
+400/400 - 125s - loss: 0.0081 - dice_for_iVOI: 0.9564
+Epoch 90/100
+400/400 - 125s - loss: 0.0079 - dice_for_iVOI: 0.9569
+Epoch 91/100
+400/400 - 124s - loss: 0.0079 - dice_for_iVOI: 0.9564
+Epoch 92/100
+400/400 - 124s - loss: 0.0079 - dice_for_iVOI: 0.9561
+Epoch 93/100
+400/400 - 124s - loss: 0.0077 - dice_for_iVOI: 0.9574
+Epoch 94/100
+400/400 - 124s - loss: 0.0077 - dice_for_iVOI: 0.9565
+Epoch 95/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9569
+Epoch 96/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9573
+Epoch 97/100
+400/400 - 124s - loss: 0.0077 - dice_for_iVOI: 0.9579
+Epoch 98/100
+400/400 - 124s - loss: 0.0077 - dice_for_iVOI: 0.9577
+Epoch 99/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9578
+Epoch 100/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9569
+2021-11-30 13:22:11.736833: I tensorflow/stream_executor/cuda/cuda_blas.cc:1839] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+training time: 12481.416429042816
+executation time:4.0152919590473175
+---------fold--2---------
+training set:  [ 0  1  2  3  4  5  6  7 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+training set size:  32
+testing set:  [ 8  9 10 11 12 13 14 15]
+testing set size:  8
+..generator_len: 400
+..training_n_subject: 32
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 126s - loss: 0.1100 - dice_for_iVOI: 0.4911
+Epoch 2/100
+400/400 - 125s - loss: 0.0604 - dice_for_iVOI: 0.6899
+Epoch 3/100
+400/400 - 125s - loss: 0.0405 - dice_for_iVOI: 0.7970
+Epoch 4/100
+400/400 - 125s - loss: 0.0259 - dice_for_iVOI: 0.8629
+Epoch 5/100
+400/400 - 125s - loss: 0.0233 - dice_for_iVOI: 0.8782
+Epoch 6/100
+400/400 - 125s - loss: 0.0177 - dice_for_iVOI: 0.9041
+Epoch 7/100
+400/400 - 125s - loss: 0.0163 - dice_for_iVOI: 0.9113
+Epoch 8/100
+400/400 - 125s - loss: 0.0278 - dice_for_iVOI: 0.8607
+Epoch 9/100
+400/400 - 125s - loss: 0.0220 - dice_for_iVOI: 0.8816
+Epoch 10/100
+400/400 - 125s - loss: 0.0165 - dice_for_iVOI: 0.9099
+Epoch 11/100
+400/400 - 125s - loss: 0.0201 - dice_for_iVOI: 0.8900
+Epoch 12/100
+400/400 - 125s - loss: 0.0239 - dice_for_iVOI: 0.8822
+Epoch 13/100
+400/400 - 125s - loss: 0.0179 - dice_for_iVOI: 0.9050
+Epoch 14/100
+400/400 - 125s - loss: 0.0149 - dice_for_iVOI: 0.9170
+Epoch 15/100
+400/400 - 124s - loss: 0.0144 - dice_for_iVOI: 0.9197
+Epoch 16/100
+400/400 - 124s - loss: 0.0209 - dice_for_iVOI: 0.8915
+Epoch 17/100
+400/400 - 125s - loss: 0.0163 - dice_for_iVOI: 0.9108
+Epoch 18/100
+400/400 - 125s - loss: 0.0146 - dice_for_iVOI: 0.9178
+Epoch 19/100
+400/400 - 125s - loss: 0.0141 - dice_for_iVOI: 0.9234
+Epoch 20/100
+400/400 - 124s - loss: 0.0131 - dice_for_iVOI: 0.9259
+Epoch 21/100
+400/400 - 125s - loss: 0.0129 - dice_for_iVOI: 0.9287
+Epoch 22/100
+400/400 - 125s - loss: 0.0128 - dice_for_iVOI: 0.9285
+Epoch 23/100
+400/400 - 125s - loss: 0.0201 - dice_for_iVOI: 0.8981
+Epoch 24/100
+400/400 - 125s - loss: 0.0149 - dice_for_iVOI: 0.9204
+Epoch 25/100
+400/400 - 125s - loss: 0.0128 - dice_for_iVOI: 0.9289
+Epoch 26/100
+400/400 - 125s - loss: 0.0123 - dice_for_iVOI: 0.9314
+Epoch 27/100
+400/400 - 125s - loss: 0.0122 - dice_for_iVOI: 0.9330
+Epoch 28/100
+400/400 - 124s - loss: 0.0122 - dice_for_iVOI: 0.9341
+Epoch 29/100
+400/400 - 124s - loss: 0.0121 - dice_for_iVOI: 0.9358
+Epoch 30/100
+400/400 - 124s - loss: 0.0181 - dice_for_iVOI: 0.9059
+Epoch 31/100
+400/400 - 125s - loss: 0.0130 - dice_for_iVOI: 0.9279
+Epoch 32/100
+400/400 - 125s - loss: 0.0121 - dice_for_iVOI: 0.9330
+Epoch 33/100
+400/400 - 125s - loss: 0.0119 - dice_for_iVOI: 0.9358
+Epoch 34/100
+400/400 - 125s - loss: 0.0112 - dice_for_iVOI: 0.9367
+Epoch 35/100
+400/400 - 125s - loss: 0.0111 - dice_for_iVOI: 0.9365
+Epoch 36/100
+400/400 - 125s - loss: 0.0110 - dice_for_iVOI: 0.9384
+Epoch 37/100
+400/400 - 125s - loss: 0.0114 - dice_for_iVOI: 0.9384
+Epoch 38/100
+400/400 - 125s - loss: 0.0106 - dice_for_iVOI: 0.9402
+Epoch 39/100
+400/400 - 124s - loss: 0.0109 - dice_for_iVOI: 0.9417
+Epoch 40/100
+400/400 - 124s - loss: 0.0108 - dice_for_iVOI: 0.9410
+Epoch 41/100
+400/400 - 124s - loss: 0.0105 - dice_for_iVOI: 0.9423
+Epoch 42/100
+400/400 - 124s - loss: 0.0133 - dice_for_iVOI: 0.9266
+Epoch 43/100
+400/400 - 124s - loss: 0.0119 - dice_for_iVOI: 0.9347
+Epoch 44/100
+400/400 - 125s - loss: 0.0111 - dice_for_iVOI: 0.9388
+Epoch 45/100
+400/400 - 125s - loss: 0.0102 - dice_for_iVOI: 0.9420
+Epoch 46/100
+400/400 - 125s - loss: 0.0100 - dice_for_iVOI: 0.9434
+Epoch 47/100
+400/400 - 124s - loss: 0.0099 - dice_for_iVOI: 0.9434
+Epoch 48/100
+400/400 - 124s - loss: 0.0100 - dice_for_iVOI: 0.9427
+Epoch 49/100
+400/400 - 125s - loss: 0.0100 - dice_for_iVOI: 0.9442
+Epoch 50/100
+400/400 - 125s - loss: 0.0097 - dice_for_iVOI: 0.9448
+Epoch 51/100
+400/400 - 125s - loss: 0.0096 - dice_for_iVOI: 0.9451
+Epoch 52/100
+400/400 - 124s - loss: 0.0218 - dice_for_iVOI: 0.8940
+Epoch 53/100
+400/400 - 125s - loss: 0.0131 - dice_for_iVOI: 0.9279
+Epoch 54/100
+400/400 - 125s - loss: 0.0112 - dice_for_iVOI: 0.9394
+Epoch 55/100
+400/400 - 125s - loss: 0.0106 - dice_for_iVOI: 0.9420
+Epoch 56/100
+400/400 - 125s - loss: 0.0103 - dice_for_iVOI: 0.9422
+Epoch 57/100
+400/400 - 124s - loss: 0.0099 - dice_for_iVOI: 0.9436
+Epoch 58/100
+400/400 - 125s - loss: 0.0098 - dice_for_iVOI: 0.9476
+Epoch 59/100
+400/400 - 125s - loss: 0.0097 - dice_for_iVOI: 0.9448
+Epoch 60/100
+400/400 - 125s - loss: 0.0095 - dice_for_iVOI: 0.9459
+Epoch 61/100
+400/400 - 125s - loss: 0.0097 - dice_for_iVOI: 0.9467
+Epoch 62/100
+400/400 - 125s - loss: 0.0098 - dice_for_iVOI: 0.9467
+Epoch 63/100
+400/400 - 125s - loss: 0.0096 - dice_for_iVOI: 0.9468
+Epoch 64/100
+400/400 - 125s - loss: 0.0097 - dice_for_iVOI: 0.9456
+Epoch 65/100
+400/400 - 125s - loss: 0.0094 - dice_for_iVOI: 0.9475
+Epoch 66/100
+400/400 - 124s - loss: 0.0092 - dice_for_iVOI: 0.9483
+Epoch 67/100
+400/400 - 125s - loss: 0.0091 - dice_for_iVOI: 0.9482
+Epoch 68/100
+400/400 - 124s - loss: 0.0091 - dice_for_iVOI: 0.9489
+Epoch 69/100
+400/400 - 125s - loss: 0.0091 - dice_for_iVOI: 0.9492
+Epoch 70/100
+400/400 - 125s - loss: 0.0173 - dice_for_iVOI: 0.9141
+Epoch 71/100
+400/400 - 125s - loss: 0.0113 - dice_for_iVOI: 0.9391
+Epoch 72/100
+400/400 - 124s - loss: 0.0100 - dice_for_iVOI: 0.9448
+Epoch 73/100
+400/400 - 124s - loss: 0.0095 - dice_for_iVOI: 0.9471
+Epoch 74/100
+400/400 - 125s - loss: 0.0093 - dice_for_iVOI: 0.9475
+Epoch 75/100
+400/400 - 125s - loss: 0.0088 - dice_for_iVOI: 0.9496
+Epoch 76/100
+400/400 - 125s - loss: 0.0090 - dice_for_iVOI: 0.9497
+Epoch 77/100
+400/400 - 124s - loss: 0.0091 - dice_for_iVOI: 0.9505
+Epoch 78/100
+400/400 - 125s - loss: 0.0091 - dice_for_iVOI: 0.9502
+Epoch 79/100
+400/400 - 125s - loss: 0.0087 - dice_for_iVOI: 0.9496
+Epoch 80/100
+400/400 - 124s - loss: 0.0088 - dice_for_iVOI: 0.9509
+Epoch 81/100
+400/400 - 125s - loss: 0.0089 - dice_for_iVOI: 0.9503
+Epoch 82/100
+400/400 - 125s - loss: 0.0089 - dice_for_iVOI: 0.9519
+Epoch 83/100
+400/400 - 125s - loss: 0.0086 - dice_for_iVOI: 0.9510
+Epoch 84/100
+400/400 - 125s - loss: 0.0087 - dice_for_iVOI: 0.9505
+Epoch 85/100
+400/400 - 125s - loss: 0.0089 - dice_for_iVOI: 0.9510
+Epoch 86/100
+400/400 - 125s - loss: 0.0086 - dice_for_iVOI: 0.9507
+Epoch 87/100
+400/400 - 125s - loss: 0.0161 - dice_for_iVOI: 0.9178
+Epoch 88/100
+400/400 - 125s - loss: 0.0101 - dice_for_iVOI: 0.9434
+Epoch 89/100
+400/400 - 125s - loss: 0.0091 - dice_for_iVOI: 0.9485
+Epoch 90/100
+400/400 - 125s - loss: 0.0088 - dice_for_iVOI: 0.9504
+Epoch 91/100
+400/400 - 125s - loss: 0.0088 - dice_for_iVOI: 0.9517
+Epoch 92/100
+400/400 - 125s - loss: 0.0087 - dice_for_iVOI: 0.9519
+Epoch 93/100
+400/400 - 125s - loss: 0.0085 - dice_for_iVOI: 0.9529
+Epoch 94/100
+400/400 - 125s - loss: 0.0086 - dice_for_iVOI: 0.9538
+Epoch 95/100
+400/400 - 124s - loss: 0.0082 - dice_for_iVOI: 0.9532
+Epoch 96/100
+400/400 - 124s - loss: 0.0085 - dice_for_iVOI: 0.9545
+Epoch 97/100
+400/400 - 125s - loss: 0.0087 - dice_for_iVOI: 0.9527
+Epoch 98/100
+400/400 - 124s - loss: 0.0083 - dice_for_iVOI: 0.9538
+Epoch 99/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9536
+Epoch 100/100
+400/400 - 125s - loss: 0.0085 - dice_for_iVOI: 0.9537
+training time: 12462.631390571594
+executation time:3.469547301530838
+---------fold--3---------
+training set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 24 25 26 27 28 29 30 31
+ 32 33 34 35 36 37 38 39]
+training set size:  32
+testing set:  [16 17 18 19 20 21 22 23]
+testing set size:  8
+..generator_len: 400
+..training_n_subject: 32
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 126s - loss: 0.1052 - dice_for_iVOI: 0.5099
+Epoch 2/100
+400/400 - 125s - loss: 0.0626 - dice_for_iVOI: 0.6872
+Epoch 3/100
+400/400 - 125s - loss: 0.0407 - dice_for_iVOI: 0.7924
+Epoch 4/100
+400/400 - 125s - loss: 0.0273 - dice_for_iVOI: 0.8626
+Epoch 5/100
+400/400 - 125s - loss: 0.0196 - dice_for_iVOI: 0.8924
+Epoch 6/100
+400/400 - 125s - loss: 0.0280 - dice_for_iVOI: 0.8561
+Epoch 7/100
+400/400 - 125s - loss: 0.0175 - dice_for_iVOI: 0.9073
+Epoch 8/100
+400/400 - 124s - loss: 0.0172 - dice_for_iVOI: 0.9102
+Epoch 9/100
+400/400 - 125s - loss: 0.0251 - dice_for_iVOI: 0.8709
+Epoch 10/100
+400/400 - 125s - loss: 0.0162 - dice_for_iVOI: 0.9161
+Epoch 11/100
+400/400 - 125s - loss: 0.0144 - dice_for_iVOI: 0.9184
+Epoch 12/100
+400/400 - 125s - loss: 0.0143 - dice_for_iVOI: 0.9213
+Epoch 13/100
+400/400 - 124s - loss: 0.0152 - dice_for_iVOI: 0.9186
+Epoch 14/100
+400/400 - 125s - loss: 0.0292 - dice_for_iVOI: 0.8578
+Epoch 15/100
+400/400 - 125s - loss: 0.0158 - dice_for_iVOI: 0.9120
+Epoch 16/100
+400/400 - 125s - loss: 0.0145 - dice_for_iVOI: 0.9232
+Epoch 17/100
+400/400 - 124s - loss: 0.0144 - dice_for_iVOI: 0.9233
+Epoch 18/100
+400/400 - 125s - loss: 0.0137 - dice_for_iVOI: 0.9255
+Epoch 19/100
+400/400 - 125s - loss: 0.0131 - dice_for_iVOI: 0.9269
+Epoch 20/100
+400/400 - 125s - loss: 0.0128 - dice_for_iVOI: 0.9301
+Epoch 21/100
+400/400 - 125s - loss: 0.0125 - dice_for_iVOI: 0.9323
+Epoch 22/100
+400/400 - 124s - loss: 0.0158 - dice_for_iVOI: 0.9140
+Epoch 23/100
+400/400 - 125s - loss: 0.0144 - dice_for_iVOI: 0.9228
+Epoch 24/100
+400/400 - 125s - loss: 0.0133 - dice_for_iVOI: 0.9284
+Epoch 25/100
+400/400 - 125s - loss: 0.0121 - dice_for_iVOI: 0.9330
+Epoch 26/100
+400/400 - 125s - loss: 0.0136 - dice_for_iVOI: 0.9267
+Epoch 27/100
+400/400 - 124s - loss: 0.0131 - dice_for_iVOI: 0.9319
+Epoch 28/100
+400/400 - 124s - loss: 0.0117 - dice_for_iVOI: 0.9355
+Epoch 29/100
+400/400 - 124s - loss: 0.0117 - dice_for_iVOI: 0.9387
+Epoch 30/100
+400/400 - 125s - loss: 0.0113 - dice_for_iVOI: 0.9384
+Epoch 31/100
+400/400 - 125s - loss: 0.0113 - dice_for_iVOI: 0.9373
+Epoch 32/100
+400/400 - 124s - loss: 0.0112 - dice_for_iVOI: 0.9395
+Epoch 33/100
+400/400 - 124s - loss: 0.0193 - dice_for_iVOI: 0.9024
+Epoch 34/100
+400/400 - 124s - loss: 0.0137 - dice_for_iVOI: 0.9259
+Epoch 35/100
+400/400 - 124s - loss: 0.0119 - dice_for_iVOI: 0.9379
+Epoch 36/100
+400/400 - 124s - loss: 0.0112 - dice_for_iVOI: 0.9397
+Epoch 37/100
+400/400 - 124s - loss: 0.0111 - dice_for_iVOI: 0.9381
+Epoch 38/100
+400/400 - 124s - loss: 0.0107 - dice_for_iVOI: 0.9402
+Epoch 39/100
+400/400 - 124s - loss: 0.0105 - dice_for_iVOI: 0.9420
+Epoch 40/100
+400/400 - 124s - loss: 0.0105 - dice_for_iVOI: 0.9443
+Epoch 41/100
+400/400 - 124s - loss: 0.0103 - dice_for_iVOI: 0.9430
+Epoch 42/100
+400/400 - 124s - loss: 0.0103 - dice_for_iVOI: 0.9446
+Epoch 43/100
+400/400 - 124s - loss: 0.0106 - dice_for_iVOI: 0.9444
+Epoch 44/100
+400/400 - 124s - loss: 0.0125 - dice_for_iVOI: 0.9353
+Epoch 45/100
+400/400 - 124s - loss: 0.0142 - dice_for_iVOI: 0.9257
+Epoch 46/100
+400/400 - 124s - loss: 0.0108 - dice_for_iVOI: 0.9414
+Epoch 47/100
+400/400 - 125s - loss: 0.0103 - dice_for_iVOI: 0.9428
+Epoch 48/100
+400/400 - 124s - loss: 0.0103 - dice_for_iVOI: 0.9453
+Epoch 49/100
+400/400 - 125s - loss: 0.0102 - dice_for_iVOI: 0.9446
+Epoch 50/100
+400/400 - 125s - loss: 0.0096 - dice_for_iVOI: 0.9463
+Epoch 51/100
+400/400 - 124s - loss: 0.0099 - dice_for_iVOI: 0.9473
+Epoch 52/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9452
+Epoch 53/100
+400/400 - 124s - loss: 0.0099 - dice_for_iVOI: 0.9467
+Epoch 54/100
+400/400 - 124s - loss: 0.0098 - dice_for_iVOI: 0.9470
+Epoch 55/100
+400/400 - 124s - loss: 0.0095 - dice_for_iVOI: 0.9477
+Epoch 56/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9479
+Epoch 57/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9483
+Epoch 58/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9485
+Epoch 59/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9494
+Epoch 60/100
+400/400 - 125s - loss: 0.0091 - dice_for_iVOI: 0.9491
+Epoch 61/100
+400/400 - 124s - loss: 0.0093 - dice_for_iVOI: 0.9497
+Epoch 62/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9499
+Epoch 63/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9507
+Epoch 64/100
+400/400 - 124s - loss: 0.0248 - dice_for_iVOI: 0.8890
+Epoch 65/100
+400/400 - 124s - loss: 0.0156 - dice_for_iVOI: 0.9193
+Epoch 66/100
+400/400 - 124s - loss: 0.0125 - dice_for_iVOI: 0.9322
+Epoch 67/100
+400/400 - 124s - loss: 0.0116 - dice_for_iVOI: 0.9400
+Epoch 68/100
+400/400 - 124s - loss: 0.0104 - dice_for_iVOI: 0.9412
+Epoch 69/100
+400/400 - 124s - loss: 0.0100 - dice_for_iVOI: 0.9448
+Epoch 70/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9474
+Epoch 71/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9492
+Epoch 72/100
+400/400 - 124s - loss: 0.0093 - dice_for_iVOI: 0.9484
+Epoch 73/100
+400/400 - 124s - loss: 0.0092 - dice_for_iVOI: 0.9500
+Epoch 74/100
+400/400 - 124s - loss: 0.0091 - dice_for_iVOI: 0.9505
+Epoch 75/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9496
+Epoch 76/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9493
+Epoch 77/100
+400/400 - 124s - loss: 0.0093 - dice_for_iVOI: 0.9494
+Epoch 78/100
+400/400 - 124s - loss: 0.0089 - dice_for_iVOI: 0.9527
+Epoch 79/100
+400/400 - 124s - loss: 0.0087 - dice_for_iVOI: 0.9527
+Epoch 80/100
+400/400 - 124s - loss: 0.0089 - dice_for_iVOI: 0.9516
+Epoch 81/100
+400/400 - 124s - loss: 0.0088 - dice_for_iVOI: 0.9514
+Epoch 82/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9521
+Epoch 83/100
+400/400 - 125s - loss: 0.0166 - dice_for_iVOI: 0.9196
+Epoch 84/100
+400/400 - 124s - loss: 0.0110 - dice_for_iVOI: 0.9396
+Epoch 85/100
+400/400 - 124s - loss: 0.0097 - dice_for_iVOI: 0.9460
+Epoch 86/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9499
+Epoch 87/100
+400/400 - 124s - loss: 0.0089 - dice_for_iVOI: 0.9514
+Epoch 88/100
+400/400 - 124s - loss: 0.0088 - dice_for_iVOI: 0.9525
+Epoch 89/100
+400/400 - 124s - loss: 0.0085 - dice_for_iVOI: 0.9537
+Epoch 90/100
+400/400 - 124s - loss: 0.0087 - dice_for_iVOI: 0.9531
+Epoch 91/100
+400/400 - 125s - loss: 0.0089 - dice_for_iVOI: 0.9526
+Epoch 92/100
+400/400 - 124s - loss: 0.0085 - dice_for_iVOI: 0.9540
+Epoch 93/100
+400/400 - 124s - loss: 0.0083 - dice_for_iVOI: 0.9536
+Epoch 94/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9542
+Epoch 95/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9542
+Epoch 96/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9539
+Epoch 97/100
+400/400 - 124s - loss: 0.0131 - dice_for_iVOI: 0.9307
+Epoch 98/100
+400/400 - 124s - loss: 0.0102 - dice_for_iVOI: 0.9451
+Epoch 99/100
+400/400 - 124s - loss: 0.0091 - dice_for_iVOI: 0.9512
+Epoch 100/100
+400/400 - 124s - loss: 0.0087 - dice_for_iVOI: 0.9535
+training time: 12449.540157318115
+executation time:3.4347561299800873
+---------fold--4---------
+training set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 32 33 34 35 36 37 38 39]
+training set size:  32
+testing set:  [24 25 26 27 28 29 30 31]
+testing set size:  8
+..generator_len: 400
+..training_n_subject: 32
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 126s - loss: 0.1081 - dice_for_iVOI: 0.5370
+Epoch 2/100
+400/400 - 125s - loss: 0.0664 - dice_for_iVOI: 0.6782
+Epoch 3/100
+400/400 - 124s - loss: 0.0392 - dice_for_iVOI: 0.8012
+Epoch 4/100
+400/400 - 124s - loss: 0.0311 - dice_for_iVOI: 0.8489
+Epoch 5/100
+400/400 - 124s - loss: 0.0201 - dice_for_iVOI: 0.8971
+Epoch 6/100
+400/400 - 124s - loss: 0.0192 - dice_for_iVOI: 0.9032
+Epoch 7/100
+400/400 - 124s - loss: 0.0158 - dice_for_iVOI: 0.9193
+Epoch 8/100
+400/400 - 125s - loss: 0.0222 - dice_for_iVOI: 0.8919
+Epoch 9/100
+400/400 - 124s - loss: 0.0163 - dice_for_iVOI: 0.9151
+Epoch 10/100
+400/400 - 124s - loss: 0.0152 - dice_for_iVOI: 0.9231
+Epoch 11/100
+400/400 - 124s - loss: 0.0137 - dice_for_iVOI: 0.9294
+Epoch 12/100
+400/400 - 124s - loss: 0.0312 - dice_for_iVOI: 0.8577
+Epoch 13/100
+400/400 - 124s - loss: 0.0150 - dice_for_iVOI: 0.9198
+Epoch 14/100
+400/400 - 125s - loss: 0.0138 - dice_for_iVOI: 0.9272
+Epoch 15/100
+400/400 - 124s - loss: 0.0353 - dice_for_iVOI: 0.8409
+Epoch 16/100
+400/400 - 124s - loss: 0.0217 - dice_for_iVOI: 0.8911
+Epoch 17/100
+400/400 - 124s - loss: 0.0148 - dice_for_iVOI: 0.9234
+Epoch 18/100
+400/400 - 124s - loss: 0.0138 - dice_for_iVOI: 0.9282
+Epoch 19/100
+400/400 - 124s - loss: 0.0133 - dice_for_iVOI: 0.9320
+Epoch 20/100
+400/400 - 125s - loss: 0.0127 - dice_for_iVOI: 0.9342
+Epoch 21/100
+400/400 - 124s - loss: 0.0160 - dice_for_iVOI: 0.9173
+Epoch 22/100
+400/400 - 124s - loss: 0.0133 - dice_for_iVOI: 0.9296
+Epoch 23/100
+400/400 - 124s - loss: 0.0125 - dice_for_iVOI: 0.9351
+Epoch 24/100
+400/400 - 125s - loss: 0.0123 - dice_for_iVOI: 0.9366
+Epoch 25/100
+400/400 - 124s - loss: 0.0118 - dice_for_iVOI: 0.9387
+Epoch 26/100
+400/400 - 124s - loss: 0.0117 - dice_for_iVOI: 0.9413
+Epoch 27/100
+400/400 - 124s - loss: 0.0119 - dice_for_iVOI: 0.9410
+Epoch 28/100
+400/400 - 124s - loss: 0.0114 - dice_for_iVOI: 0.9414
+Epoch 29/100
+400/400 - 124s - loss: 0.0220 - dice_for_iVOI: 0.8940
+Epoch 30/100
+400/400 - 124s - loss: 0.0132 - dice_for_iVOI: 0.9303
+Epoch 31/100
+400/400 - 125s - loss: 0.0119 - dice_for_iVOI: 0.9372
+Epoch 32/100
+400/400 - 124s - loss: 0.0118 - dice_for_iVOI: 0.9408
+Epoch 33/100
+400/400 - 124s - loss: 0.0111 - dice_for_iVOI: 0.9418
+Epoch 34/100
+400/400 - 124s - loss: 0.0109 - dice_for_iVOI: 0.9422
+Epoch 35/100
+400/400 - 124s - loss: 0.0166 - dice_for_iVOI: 0.9177
+Epoch 36/100
+400/400 - 124s - loss: 0.0116 - dice_for_iVOI: 0.9394
+Epoch 37/100
+400/400 - 125s - loss: 0.0114 - dice_for_iVOI: 0.9422
+Epoch 38/100
+400/400 - 124s - loss: 0.0107 - dice_for_iVOI: 0.9443
+Epoch 39/100
+400/400 - 124s - loss: 0.0104 - dice_for_iVOI: 0.9463
+Epoch 40/100
+400/400 - 125s - loss: 0.0102 - dice_for_iVOI: 0.9453
+Epoch 41/100
+400/400 - 125s - loss: 0.0100 - dice_for_iVOI: 0.9453
+Epoch 42/100
+400/400 - 125s - loss: 0.0097 - dice_for_iVOI: 0.9463
+Epoch 43/100
+400/400 - 124s - loss: 0.0104 - dice_for_iVOI: 0.9468
+Epoch 44/100
+400/400 - 124s - loss: 0.0154 - dice_for_iVOI: 0.9230
+Epoch 45/100
+400/400 - 124s - loss: 0.0109 - dice_for_iVOI: 0.9419
+Epoch 46/100
+400/400 - 125s - loss: 0.0101 - dice_for_iVOI: 0.9444
+Epoch 47/100
+400/400 - 125s - loss: 0.0102 - dice_for_iVOI: 0.9462
+Epoch 48/100
+400/400 - 124s - loss: 0.0101 - dice_for_iVOI: 0.9468
+Epoch 49/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9480
+Epoch 50/100
+400/400 - 125s - loss: 0.0100 - dice_for_iVOI: 0.9463
+Epoch 51/100
+400/400 - 124s - loss: 0.0099 - dice_for_iVOI: 0.9490
+Epoch 52/100
+400/400 - 124s - loss: 0.0097 - dice_for_iVOI: 0.9481
+Epoch 53/100
+400/400 - 124s - loss: 0.0099 - dice_for_iVOI: 0.9485
+Epoch 54/100
+400/400 - 125s - loss: 0.0100 - dice_for_iVOI: 0.9492
+Epoch 55/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9479
+Epoch 56/100
+400/400 - 124s - loss: 0.0099 - dice_for_iVOI: 0.9470
+Epoch 57/100
+400/400 - 124s - loss: 0.0095 - dice_for_iVOI: 0.9504
+Epoch 58/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9504
+Epoch 59/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9497
+Epoch 60/100
+400/400 - 124s - loss: 0.0219 - dice_for_iVOI: 0.8935
+Epoch 61/100
+400/400 - 124s - loss: 0.0119 - dice_for_iVOI: 0.9384
+Epoch 62/100
+400/400 - 124s - loss: 0.0104 - dice_for_iVOI: 0.9436
+Epoch 63/100
+400/400 - 124s - loss: 0.0103 - dice_for_iVOI: 0.9462
+Epoch 64/100
+400/400 - 124s - loss: 0.0098 - dice_for_iVOI: 0.9488
+Epoch 65/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9497
+Epoch 66/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9505
+Epoch 67/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9507
+Epoch 68/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9505
+Epoch 69/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9515
+Epoch 70/100
+400/400 - 124s - loss: 0.0095 - dice_for_iVOI: 0.9494
+Epoch 71/100
+400/400 - 124s - loss: 0.0118 - dice_for_iVOI: 0.9382
+Epoch 72/100
+400/400 - 124s - loss: 0.0098 - dice_for_iVOI: 0.9484
+Epoch 73/100
+400/400 - 124s - loss: 0.0093 - dice_for_iVOI: 0.9502
+Epoch 74/100
+400/400 - 125s - loss: 0.0092 - dice_for_iVOI: 0.9512
+Epoch 75/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9511
+Epoch 76/100
+400/400 - 124s - loss: 0.0091 - dice_for_iVOI: 0.9523
+Epoch 77/100
+400/400 - 124s - loss: 0.0092 - dice_for_iVOI: 0.9526
+Epoch 78/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9516
+Epoch 79/100
+400/400 - 124s - loss: 0.0156 - dice_for_iVOI: 0.9209
+Epoch 80/100
+400/400 - 124s - loss: 0.0110 - dice_for_iVOI: 0.9427
+Epoch 81/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9485
+Epoch 82/100
+400/400 - 124s - loss: 0.0093 - dice_for_iVOI: 0.9513
+Epoch 83/100
+400/400 - 124s - loss: 0.0091 - dice_for_iVOI: 0.9514
+Epoch 84/100
+400/400 - 124s - loss: 0.0091 - dice_for_iVOI: 0.9522
+Epoch 85/100
+400/400 - 125s - loss: 0.0091 - dice_for_iVOI: 0.9529
+Epoch 86/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9522
+Epoch 87/100
+400/400 - 125s - loss: 0.0088 - dice_for_iVOI: 0.9514
+Epoch 88/100
+400/400 - 124s - loss: 0.0135 - dice_for_iVOI: 0.9356
+Epoch 89/100
+400/400 - 124s - loss: 0.0101 - dice_for_iVOI: 0.9472
+Epoch 90/100
+400/400 - 124s - loss: 0.0092 - dice_for_iVOI: 0.9524
+Epoch 91/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9531
+Epoch 92/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9528
+Epoch 93/100
+400/400 - 125s - loss: 0.0088 - dice_for_iVOI: 0.9531
+Epoch 94/100
+400/400 - 125s - loss: 0.0199 - dice_for_iVOI: 0.9054
+Epoch 95/100
+400/400 - 124s - loss: 0.0111 - dice_for_iVOI: 0.9387
+Epoch 96/100
+400/400 - 124s - loss: 0.0097 - dice_for_iVOI: 0.9472
+Epoch 97/100
+400/400 - 124s - loss: 0.0095 - dice_for_iVOI: 0.9515
+Epoch 98/100
+400/400 - 124s - loss: 0.0093 - dice_for_iVOI: 0.9521
+Epoch 99/100
+400/400 - 124s - loss: 0.0089 - dice_for_iVOI: 0.9527
+Epoch 100/100
+400/400 - 125s - loss: 0.0088 - dice_for_iVOI: 0.9534
+training time: 12448.807973146439
+executation time:3.4797421395778656
+---------fold--5---------
+training set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31]
+training set size:  32
+testing set:  [32 33 34 35 36 37 38 39]
+testing set size:  8
+..generator_len: 400
+..training_n_subject: 32
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 126s - loss: 0.0677 - dice_for_iVOI: 0.6074
+Epoch 2/100
+400/400 - 125s - loss: 0.0281 - dice_for_iVOI: 0.8213
+Epoch 3/100
+400/400 - 124s - loss: 0.0232 - dice_for_iVOI: 0.8533
+Epoch 4/100
+400/400 - 125s - loss: 0.0174 - dice_for_iVOI: 0.8866
+Epoch 5/100
+400/400 - 124s - loss: 0.0147 - dice_for_iVOI: 0.9078
+Epoch 6/100
+400/400 - 124s - loss: 0.0142 - dice_for_iVOI: 0.9060
+Epoch 7/100
+400/400 - 125s - loss: 0.0179 - dice_for_iVOI: 0.8884
+Epoch 8/100
+400/400 - 124s - loss: 0.0132 - dice_for_iVOI: 0.9148
+Epoch 9/100
+400/400 - 124s - loss: 0.0129 - dice_for_iVOI: 0.9165
+Epoch 10/100
+400/400 - 124s - loss: 0.0122 - dice_for_iVOI: 0.9201
+Epoch 11/100
+400/400 - 124s - loss: 0.0115 - dice_for_iVOI: 0.9230
+Epoch 12/100
+400/400 - 124s - loss: 0.0115 - dice_for_iVOI: 0.9263
+Epoch 13/100
+400/400 - 124s - loss: 0.0110 - dice_for_iVOI: 0.9260
+Epoch 14/100
+400/400 - 124s - loss: 0.0168 - dice_for_iVOI: 0.8973
+Epoch 15/100
+400/400 - 124s - loss: 0.0117 - dice_for_iVOI: 0.9219
+Epoch 16/100
+400/400 - 124s - loss: 0.0109 - dice_for_iVOI: 0.9271
+Epoch 17/100
+400/400 - 124s - loss: 0.0107 - dice_for_iVOI: 0.9305
+Epoch 18/100
+400/400 - 124s - loss: 0.0104 - dice_for_iVOI: 0.9305
+Epoch 19/100
+400/400 - 124s - loss: 0.0102 - dice_for_iVOI: 0.9322
+Epoch 20/100
+400/400 - 124s - loss: 0.0102 - dice_for_iVOI: 0.9345
+Epoch 21/100
+400/400 - 124s - loss: 0.0100 - dice_for_iVOI: 0.9337
+Epoch 22/100
+400/400 - 125s - loss: 0.0097 - dice_for_iVOI: 0.9364
+Epoch 23/100
+400/400 - 124s - loss: 0.0099 - dice_for_iVOI: 0.9355
+Epoch 24/100
+400/400 - 124s - loss: 0.0104 - dice_for_iVOI: 0.9307
+Epoch 25/100
+400/400 - 124s - loss: 0.0095 - dice_for_iVOI: 0.9368
+Epoch 26/100
+400/400 - 124s - loss: 0.0092 - dice_for_iVOI: 0.9391
+Epoch 27/100
+400/400 - 124s - loss: 0.0092 - dice_for_iVOI: 0.9386
+Epoch 28/100
+400/400 - 124s - loss: 0.0089 - dice_for_iVOI: 0.9394
+Epoch 29/100
+400/400 - 124s - loss: 0.0121 - dice_for_iVOI: 0.9218
+Epoch 30/100
+400/400 - 124s - loss: 0.0096 - dice_for_iVOI: 0.9361
+Epoch 31/100
+400/400 - 124s - loss: 0.0090 - dice_for_iVOI: 0.9400
+Epoch 32/100
+400/400 - 124s - loss: 0.0086 - dice_for_iVOI: 0.9419
+Epoch 33/100
+400/400 - 124s - loss: 0.0087 - dice_for_iVOI: 0.9432
+Epoch 34/100
+400/400 - 124s - loss: 0.0085 - dice_for_iVOI: 0.9434
+Epoch 35/100
+400/400 - 124s - loss: 0.0087 - dice_for_iVOI: 0.9431
+Epoch 36/100
+400/400 - 124s - loss: 0.0083 - dice_for_iVOI: 0.9444
+Epoch 37/100
+400/400 - 124s - loss: 0.0083 - dice_for_iVOI: 0.9452
+Epoch 38/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9438
+Epoch 39/100
+400/400 - 124s - loss: 0.0082 - dice_for_iVOI: 0.9444
+Epoch 40/100
+400/400 - 124s - loss: 0.0081 - dice_for_iVOI: 0.9458
+Epoch 41/100
+400/400 - 124s - loss: 0.0080 - dice_for_iVOI: 0.9469
+Epoch 42/100
+400/400 - 124s - loss: 0.0088 - dice_for_iVOI: 0.9414
+Epoch 43/100
+400/400 - 124s - loss: 0.0110 - dice_for_iVOI: 0.9300
+Epoch 44/100
+400/400 - 124s - loss: 0.0092 - dice_for_iVOI: 0.9382
+Epoch 45/100
+400/400 - 124s - loss: 0.0083 - dice_for_iVOI: 0.9454
+Epoch 46/100
+400/400 - 124s - loss: 0.0081 - dice_for_iVOI: 0.9466
+Epoch 47/100
+400/400 - 124s - loss: 0.0077 - dice_for_iVOI: 0.9474
+Epoch 48/100
+400/400 - 124s - loss: 0.0078 - dice_for_iVOI: 0.9481
+Epoch 49/100
+400/400 - 124s - loss: 0.0078 - dice_for_iVOI: 0.9491
+Epoch 50/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9482
+Epoch 51/100
+400/400 - 124s - loss: 0.0079 - dice_for_iVOI: 0.9486
+Epoch 52/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9489
+Epoch 53/100
+400/400 - 124s - loss: 0.0075 - dice_for_iVOI: 0.9501
+Epoch 54/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9494
+Epoch 55/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9500
+Epoch 56/100
+400/400 - 124s - loss: 0.0108 - dice_for_iVOI: 0.9313
+Epoch 57/100
+400/400 - 124s - loss: 0.0083 - dice_for_iVOI: 0.9448
+Epoch 58/100
+400/400 - 124s - loss: 0.0079 - dice_for_iVOI: 0.9474
+Epoch 59/100
+400/400 - 124s - loss: 0.0075 - dice_for_iVOI: 0.9501
+Epoch 60/100
+400/400 - 124s - loss: 0.0078 - dice_for_iVOI: 0.9498
+Epoch 61/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9514
+Epoch 62/100
+400/400 - 124s - loss: 0.0074 - dice_for_iVOI: 0.9509
+Epoch 63/100
+400/400 - 124s - loss: 0.0074 - dice_for_iVOI: 0.9509
+Epoch 64/100
+400/400 - 124s - loss: 0.0074 - dice_for_iVOI: 0.9513
+Epoch 65/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9518
+Epoch 66/100
+400/400 - 124s - loss: 0.0072 - dice_for_iVOI: 0.9518
+Epoch 67/100
+400/400 - 124s - loss: 0.0074 - dice_for_iVOI: 0.9505
+Epoch 68/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9503
+Epoch 69/100
+400/400 - 124s - loss: 0.0072 - dice_for_iVOI: 0.9507
+Epoch 70/100
+400/400 - 124s - loss: 0.0074 - dice_for_iVOI: 0.9511
+Epoch 71/100
+400/400 - 124s - loss: 0.0115 - dice_for_iVOI: 0.9298
+Epoch 72/100
+400/400 - 124s - loss: 0.0084 - dice_for_iVOI: 0.9434
+Epoch 73/100
+400/400 - 124s - loss: 0.0077 - dice_for_iVOI: 0.9486
+Epoch 74/100
+400/400 - 124s - loss: 0.0075 - dice_for_iVOI: 0.9502
+Epoch 75/100
+400/400 - 124s - loss: 0.0071 - dice_for_iVOI: 0.9520
+Epoch 76/100
+400/400 - 124s - loss: 0.0070 - dice_for_iVOI: 0.9516
+Epoch 77/100
+400/400 - 124s - loss: 0.0072 - dice_for_iVOI: 0.9519
+Epoch 78/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9522
+Epoch 79/100
+400/400 - 124s - loss: 0.0071 - dice_for_iVOI: 0.9521
+Epoch 80/100
+400/400 - 124s - loss: 0.0071 - dice_for_iVOI: 0.9523
+Epoch 81/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9522
+Epoch 82/100
+400/400 - 124s - loss: 0.0074 - dice_for_iVOI: 0.9512
+Epoch 83/100
+400/400 - 124s - loss: 0.0071 - dice_for_iVOI: 0.9520
+Epoch 84/100
+400/400 - 124s - loss: 0.0072 - dice_for_iVOI: 0.9522
+Epoch 85/100
+400/400 - 124s - loss: 0.0072 - dice_for_iVOI: 0.9521
+Epoch 86/100
+400/400 - 124s - loss: 0.0070 - dice_for_iVOI: 0.9527
+Epoch 87/100
+400/400 - 124s - loss: 0.0076 - dice_for_iVOI: 0.9495
+Epoch 88/100
+400/400 - 124s - loss: 0.0068 - dice_for_iVOI: 0.9530
+Epoch 89/100
+400/400 - 124s - loss: 0.0071 - dice_for_iVOI: 0.9528
+Epoch 90/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9529
+Epoch 91/100
+400/400 - 124s - loss: 0.0070 - dice_for_iVOI: 0.9533
+Epoch 92/100
+400/400 - 124s - loss: 0.0072 - dice_for_iVOI: 0.9525
+Epoch 93/100
+400/400 - 124s - loss: 0.0072 - dice_for_iVOI: 0.9517
+Epoch 94/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9530
+Epoch 95/100
+400/400 - 124s - loss: 0.0071 - dice_for_iVOI: 0.9528
+Epoch 96/100
+400/400 - 124s - loss: 0.0071 - dice_for_iVOI: 0.9522
+Epoch 97/100
+400/400 - 124s - loss: 0.0069 - dice_for_iVOI: 0.9531
+Epoch 98/100
+400/400 - 124s - loss: 0.0083 - dice_for_iVOI: 0.9444
+Epoch 99/100
+400/400 - 124s - loss: 0.0094 - dice_for_iVOI: 0.9382
+Epoch 100/100
+400/400 - 124s - loss: 0.0073 - dice_for_iVOI: 0.9518
+training time: 12436.941824913025
+executation time:3.4927639067173004
+[0.9961771  0.87257034]

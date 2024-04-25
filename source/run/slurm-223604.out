@@ -1,0 +1,19 @@
+U-Net
+[33mWARNING:[0m NVIDIA binaries may not be bound with --writable
+..data size:(98, 117, 159, 126)
+..loading data finished
+---------fold--1---------
+training set:  [19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+ 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66
+ 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+ 91 92 93 94]
+training set size:  76
+testing set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18]
+testing set size:  19
+..generator_len: 400
+..training_n_subject: 76
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 68s - loss: 0.1255 - dice_for_iVOI: 0.3474 - 68s/epoch - 169ms/step
+Epoch 2/100
+slurmstepd: error: *** JOB 223604 ON g04 CANCELLED AT 2022-08-10T11:29:10 ***

@@ -1,0 +1,1172 @@
+U-Net
+[33mWARNING:[0m NVIDIA binaries may not be bound with --writable
+2022-02-25 16:36:54.760200: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+..data size:(98, 117, 159, 126)
+2022-02-25 16:37:02.750097: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcuda.so.1
+2022-02-25 16:37:02.795178: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-25 16:37:02.795993: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 1 with properties: 
+pciBusID: 0000:82:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-25 16:37:02.796027: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-02-25 16:37:02.801850: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublas.so.11
+2022-02-25 16:37:02.801908: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublasLt.so.11
+2022-02-25 16:37:02.805040: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcufft.so.10
+2022-02-25 16:37:02.805747: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcurand.so.10
+2022-02-25 16:37:02.806705: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusolver.so.11
+2022-02-25 16:37:02.807983: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcusparse.so.11
+2022-02-25 16:37:02.808481: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudnn.so.8
+2022-02-25 16:37:02.811591: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0, 1
+2022-02-25 16:37:02.998122: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-25 16:37:02.998859: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 1 with properties: 
+pciBusID: 0000:82:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-25 16:37:03.001576: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0, 1
+2022-02-25 16:37:03.001623: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2022-02-25 16:37:03.710147: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-02-25 16:37:03.710208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 1 
+2022-02-25 16:37:03.710225: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N N 
+2022-02-25 16:37:03.710234: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 1:   N N 
+2022-02-25 16:37:03.714510: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11158 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:03:00.0, compute capability: 6.0)
+2022-02-25 16:37:03.715632: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11158 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-12GB, pci bus id: 0000:82:00.0, compute capability: 6.0)
+2022-02-25 16:37:04.414791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-25 16:37:04.415527: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 1 with properties: 
+pciBusID: 0000:82:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-25 16:37:04.417518: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0, 1
+2022-02-25 16:37:04.417559: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-02-25 16:37:04.417570: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 1 
+2022-02-25 16:37:04.417578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N N 
+2022-02-25 16:37:04.417586: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 1:   N N 
+2022-02-25 16:37:04.418959: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11158 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:03:00.0, compute capability: 6.0)
+2022-02-25 16:37:04.419660: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11158 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-12GB, pci bus id: 0000:82:00.0, compute capability: 6.0)
+..loading data finished
+---------fold--1---------
+training set:  [19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+ 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66
+ 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+ 91 92 93 94]
+training set size:  76
+testing set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18]
+testing set size:  19
+..generator_len: 400
+..training_n_subject: 76
+..training_n_patch_per_sub: 326592
+2022-02-25 16:37:06.039553: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-02-25 16:37:06.040120: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 2400075000 Hz
+2022-02-25 16:37:09.737610: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudnn.so.8
+2022-02-25 16:37:10.126861: I tensorflow/stream_executor/cuda/cuda_dnn.cc:380] Loaded cuDNN version 8202
+2022-02-25 16:37:10.564833: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublas.so.11
+2022-02-25 16:37:10.845582: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcublasLt.so.11
+Epoch 1/100
+400/400 - 556s - loss: 0.1235 - dice_for_iVOI: 0.3972
+Epoch 2/100
+400/400 - 510s - loss: 0.0817 - dice_for_iVOI: 0.5731
+Epoch 3/100
+400/400 - 510s - loss: 0.0570 - dice_for_iVOI: 0.6781
+Epoch 4/100
+400/400 - 510s - loss: 0.0448 - dice_for_iVOI: 0.7460
+Epoch 5/100
+400/400 - 510s - loss: 0.0302 - dice_for_iVOI: 0.8185
+Epoch 6/100
+400/400 - 509s - loss: 0.0359 - dice_for_iVOI: 0.7945
+Epoch 7/100
+400/400 - 510s - loss: 0.0259 - dice_for_iVOI: 0.8348
+Epoch 8/100
+400/400 - 509s - loss: 0.0202 - dice_for_iVOI: 0.8689
+Epoch 9/100
+400/400 - 510s - loss: 0.0182 - dice_for_iVOI: 0.8862
+Epoch 10/100
+400/400 - 510s - loss: 0.0182 - dice_for_iVOI: 0.8837
+Epoch 11/100
+400/400 - 510s - loss: 0.0363 - dice_for_iVOI: 0.8124
+Epoch 12/100
+400/400 - 510s - loss: 0.0206 - dice_for_iVOI: 0.8744
+Epoch 13/100
+400/400 - 510s - loss: 0.0191 - dice_for_iVOI: 0.8860
+Epoch 14/100
+400/400 - 510s - loss: 0.0159 - dice_for_iVOI: 0.8995
+Epoch 15/100
+400/400 - 510s - loss: 0.0159 - dice_for_iVOI: 0.8977
+Epoch 16/100
+400/400 - 510s - loss: 0.0157 - dice_for_iVOI: 0.9046
+Epoch 17/100
+400/400 - 510s - loss: 0.0157 - dice_for_iVOI: 0.9046
+Epoch 18/100
+400/400 - 510s - loss: 0.0158 - dice_for_iVOI: 0.8995
+Epoch 19/100
+400/400 - 510s - loss: 0.0237 - dice_for_iVOI: 0.8582
+Epoch 20/100
+400/400 - 510s - loss: 0.0153 - dice_for_iVOI: 0.9054
+Epoch 21/100
+400/400 - 510s - loss: 0.0142 - dice_for_iVOI: 0.9069
+Epoch 22/100
+400/400 - 510s - loss: 0.0149 - dice_for_iVOI: 0.9077
+Epoch 23/100
+400/400 - 510s - loss: 0.0180 - dice_for_iVOI: 0.8947
+Epoch 24/100
+400/400 - 510s - loss: 0.0169 - dice_for_iVOI: 0.8945
+Epoch 25/100
+400/400 - 510s - loss: 0.0215 - dice_for_iVOI: 0.8797
+Epoch 26/100
+400/400 - 510s - loss: 0.0140 - dice_for_iVOI: 0.9071
+Epoch 27/100
+400/400 - 510s - loss: 0.0138 - dice_for_iVOI: 0.9121
+Epoch 28/100
+400/400 - 510s - loss: 0.0256 - dice_for_iVOI: 0.8569
+Epoch 29/100
+400/400 - 510s - loss: 0.0144 - dice_for_iVOI: 0.9064
+Epoch 30/100
+400/400 - 510s - loss: 0.0137 - dice_for_iVOI: 0.9108
+Epoch 31/100
+400/400 - 510s - loss: 0.0141 - dice_for_iVOI: 0.9153
+Epoch 32/100
+400/400 - 510s - loss: 0.0130 - dice_for_iVOI: 0.9158
+Epoch 33/100
+400/400 - 510s - loss: 0.0130 - dice_for_iVOI: 0.9138
+Epoch 34/100
+400/400 - 510s - loss: 0.0150 - dice_for_iVOI: 0.9066
+Epoch 35/100
+400/400 - 511s - loss: 0.0138 - dice_for_iVOI: 0.9123
+Epoch 36/100
+400/400 - 511s - loss: 0.0129 - dice_for_iVOI: 0.9173
+Epoch 37/100
+400/400 - 511s - loss: 0.0142 - dice_for_iVOI: 0.9111
+Epoch 38/100
+400/400 - 510s - loss: 0.0136 - dice_for_iVOI: 0.9132
+Epoch 39/100
+400/400 - 510s - loss: 0.0148 - dice_for_iVOI: 0.9067
+Epoch 40/100
+400/400 - 510s - loss: 0.0139 - dice_for_iVOI: 0.9110
+Epoch 41/100
+400/400 - 510s - loss: 0.0126 - dice_for_iVOI: 0.9198
+Epoch 42/100
+400/400 - 511s - loss: 0.0126 - dice_for_iVOI: 0.9204
+Epoch 43/100
+400/400 - 510s - loss: 0.0163 - dice_for_iVOI: 0.9072
+Epoch 44/100
+400/400 - 509s - loss: 0.0132 - dice_for_iVOI: 0.9139
+Epoch 45/100
+400/400 - 509s - loss: 0.0126 - dice_for_iVOI: 0.9201
+Epoch 46/100
+400/400 - 510s - loss: 0.0119 - dice_for_iVOI: 0.9213
+Epoch 47/100
+400/400 - 510s - loss: 0.0128 - dice_for_iVOI: 0.9199
+Epoch 48/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9191
+Epoch 49/100
+400/400 - 510s - loss: 0.0120 - dice_for_iVOI: 0.9222
+Epoch 50/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9230
+Epoch 51/100
+400/400 - 510s - loss: 0.0196 - dice_for_iVOI: 0.8894
+Epoch 52/100
+400/400 - 510s - loss: 0.0139 - dice_for_iVOI: 0.9125
+Epoch 53/100
+400/400 - 510s - loss: 0.0128 - dice_for_iVOI: 0.9213
+Epoch 54/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9213
+Epoch 55/100
+400/400 - 510s - loss: 0.0122 - dice_for_iVOI: 0.9252
+Epoch 56/100
+400/400 - 511s - loss: 0.0121 - dice_for_iVOI: 0.9262
+Epoch 57/100
+400/400 - 511s - loss: 0.0119 - dice_for_iVOI: 0.9246
+Epoch 58/100
+400/400 - 511s - loss: 0.0113 - dice_for_iVOI: 0.9266
+Epoch 59/100
+400/400 - 511s - loss: 0.0112 - dice_for_iVOI: 0.9277
+Epoch 60/100
+400/400 - 511s - loss: 0.0116 - dice_for_iVOI: 0.9238
+Epoch 61/100
+400/400 - 511s - loss: 0.0113 - dice_for_iVOI: 0.9253
+Epoch 62/100
+400/400 - 511s - loss: 0.0116 - dice_for_iVOI: 0.9256
+Epoch 63/100
+400/400 - 511s - loss: 0.0208 - dice_for_iVOI: 0.9008
+Epoch 64/100
+400/400 - 511s - loss: 0.0210 - dice_for_iVOI: 0.8862
+Epoch 65/100
+400/400 - 511s - loss: 0.0124 - dice_for_iVOI: 0.9208
+Epoch 66/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9228
+Epoch 67/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9256
+Epoch 68/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9283
+Epoch 69/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9282
+Epoch 70/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9269
+Epoch 71/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9266
+Epoch 72/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9278
+Epoch 73/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9282
+Epoch 74/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9282
+Epoch 75/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9291
+Epoch 76/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9298
+Epoch 77/100
+400/400 - 510s - loss: 0.0105 - dice_for_iVOI: 0.9277
+Epoch 78/100
+400/400 - 510s - loss: 0.0110 - dice_for_iVOI: 0.9288
+Epoch 79/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9291
+Epoch 80/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9306
+Epoch 81/100
+400/400 - 510s - loss: 0.0108 - dice_for_iVOI: 0.9316
+Epoch 82/100
+400/400 - 510s - loss: 0.0108 - dice_for_iVOI: 0.9293
+Epoch 83/100
+400/400 - 510s - loss: 0.0125 - dice_for_iVOI: 0.9223
+Epoch 84/100
+400/400 - 510s - loss: 0.0156 - dice_for_iVOI: 0.9066
+Epoch 85/100
+400/400 - 510s - loss: 0.0134 - dice_for_iVOI: 0.9188
+Epoch 86/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9289
+Epoch 87/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9307
+Epoch 88/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9299
+Epoch 89/100
+400/400 - 510s - loss: 0.0104 - dice_for_iVOI: 0.9338
+Epoch 90/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9339
+Epoch 91/100
+400/400 - 510s - loss: 0.0104 - dice_for_iVOI: 0.9333
+Epoch 92/100
+400/400 - 510s - loss: 0.0105 - dice_for_iVOI: 0.9321
+Epoch 93/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9289
+Epoch 94/100
+400/400 - 510s - loss: 0.0105 - dice_for_iVOI: 0.9326
+Epoch 95/100
+400/400 - 509s - loss: 0.0106 - dice_for_iVOI: 0.9346
+Epoch 96/100
+400/400 - 509s - loss: 0.0109 - dice_for_iVOI: 0.9324
+Epoch 97/100
+400/400 - 509s - loss: 0.0107 - dice_for_iVOI: 0.9328
+Epoch 98/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9368
+Epoch 99/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9355
+Epoch 100/100
+400/400 - 510s - loss: 0.0104 - dice_for_iVOI: 0.9361
+2022-02-26 06:55:36.759184: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-26 06:55:36.760427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 1 with properties: 
+pciBusID: 0000:82:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-26 06:55:36.762639: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0, 1
+2022-02-26 06:55:36.762702: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-02-26 06:55:36.762715: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 1 
+2022-02-26 06:55:36.762725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N N 
+2022-02-26 06:55:36.762733: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 1:   N N 
+2022-02-26 06:55:36.764295: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11158 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:03:00.0, compute capability: 6.0)
+2022-02-26 06:55:36.765113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11158 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-12GB, pci bus id: 0000:82:00.0, compute capability: 6.0)
+training time: 51058.59664416313
+executation time:23.3560185683401
+---------fold--2---------
+training set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 38 39 40 41 42
+ 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66
+ 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+ 91 92 93 94]
+training set size:  76
+testing set:  [19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37]
+testing set size:  19
+..generator_len: 400
+..training_n_subject: 76
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 513s - loss: 0.0962 - dice_for_iVOI: 0.4559
+Epoch 2/100
+400/400 - 510s - loss: 0.0674 - dice_for_iVOI: 0.6155
+Epoch 3/100
+400/400 - 510s - loss: 0.0479 - dice_for_iVOI: 0.7151
+Epoch 4/100
+400/400 - 510s - loss: 0.0359 - dice_for_iVOI: 0.7658
+Epoch 5/100
+400/400 - 510s - loss: 0.0393 - dice_for_iVOI: 0.7672
+Epoch 6/100
+400/400 - 510s - loss: 0.0226 - dice_for_iVOI: 0.8525
+Epoch 7/100
+400/400 - 510s - loss: 0.0190 - dice_for_iVOI: 0.8733
+Epoch 8/100
+400/400 - 510s - loss: 0.0258 - dice_for_iVOI: 0.8365
+Epoch 9/100
+400/400 - 509s - loss: 0.0233 - dice_for_iVOI: 0.8560
+Epoch 10/100
+400/400 - 510s - loss: 0.0167 - dice_for_iVOI: 0.8865
+Epoch 11/100
+400/400 - 510s - loss: 0.0150 - dice_for_iVOI: 0.8974
+Epoch 12/100
+400/400 - 510s - loss: 0.0228 - dice_for_iVOI: 0.8579
+Epoch 13/100
+400/400 - 510s - loss: 0.0161 - dice_for_iVOI: 0.8969
+Epoch 14/100
+400/400 - 509s - loss: 0.0207 - dice_for_iVOI: 0.8690
+Epoch 15/100
+400/400 - 510s - loss: 0.0145 - dice_for_iVOI: 0.8958
+Epoch 16/100
+400/400 - 510s - loss: 0.0140 - dice_for_iVOI: 0.9068
+Epoch 17/100
+400/400 - 510s - loss: 0.0212 - dice_for_iVOI: 0.8709
+Epoch 18/100
+400/400 - 510s - loss: 0.0148 - dice_for_iVOI: 0.8958
+Epoch 19/100
+400/400 - 509s - loss: 0.0137 - dice_for_iVOI: 0.9082
+Epoch 20/100
+400/400 - 509s - loss: 0.0146 - dice_for_iVOI: 0.9028
+Epoch 21/100
+400/400 - 510s - loss: 0.0175 - dice_for_iVOI: 0.8867
+Epoch 22/100
+400/400 - 510s - loss: 0.0130 - dice_for_iVOI: 0.9095
+Epoch 23/100
+400/400 - 510s - loss: 0.0133 - dice_for_iVOI: 0.9104
+Epoch 24/100
+400/400 - 510s - loss: 0.0149 - dice_for_iVOI: 0.8976
+Epoch 25/100
+400/400 - 510s - loss: 0.0141 - dice_for_iVOI: 0.9088
+Epoch 26/100
+400/400 - 510s - loss: 0.0123 - dice_for_iVOI: 0.9149
+Epoch 27/100
+400/400 - 510s - loss: 0.0122 - dice_for_iVOI: 0.9177
+Epoch 28/100
+400/400 - 510s - loss: 0.0126 - dice_for_iVOI: 0.9152
+Epoch 29/100
+400/400 - 509s - loss: 0.0204 - dice_for_iVOI: 0.8830
+Epoch 30/100
+400/400 - 509s - loss: 0.0145 - dice_for_iVOI: 0.8990
+Epoch 31/100
+400/400 - 510s - loss: 0.0132 - dice_for_iVOI: 0.9143
+Epoch 32/100
+400/400 - 510s - loss: 0.0119 - dice_for_iVOI: 0.9153
+Epoch 33/100
+400/400 - 509s - loss: 0.0125 - dice_for_iVOI: 0.9152
+Epoch 34/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9179
+Epoch 35/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9177
+Epoch 36/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9214
+Epoch 37/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9223
+Epoch 38/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9221
+Epoch 39/100
+400/400 - 509s - loss: 0.0107 - dice_for_iVOI: 0.9220
+Epoch 40/100
+400/400 - 510s - loss: 0.0125 - dice_for_iVOI: 0.9141
+Epoch 41/100
+400/400 - 510s - loss: 0.0113 - dice_for_iVOI: 0.9220
+Epoch 42/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9192
+Epoch 43/100
+400/400 - 510s - loss: 0.0141 - dice_for_iVOI: 0.9080
+Epoch 44/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9201
+Epoch 45/100
+400/400 - 510s - loss: 0.0204 - dice_for_iVOI: 0.8880
+Epoch 46/100
+400/400 - 510s - loss: 0.0166 - dice_for_iVOI: 0.8966
+Epoch 47/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9181
+Epoch 48/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9225
+Epoch 49/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9233
+Epoch 50/100
+400/400 - 509s - loss: 0.0115 - dice_for_iVOI: 0.9230
+Epoch 51/100
+400/400 - 510s - loss: 0.0113 - dice_for_iVOI: 0.9261
+Epoch 52/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9232
+Epoch 53/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9250
+Epoch 54/100
+400/400 - 510s - loss: 0.0109 - dice_for_iVOI: 0.9260
+Epoch 55/100
+400/400 - 510s - loss: 0.0108 - dice_for_iVOI: 0.9260
+Epoch 56/100
+400/400 - 510s - loss: 0.0103 - dice_for_iVOI: 0.9266
+Epoch 57/100
+400/400 - 510s - loss: 0.0106 - dice_for_iVOI: 0.9268
+Epoch 58/100
+400/400 - 510s - loss: 0.0102 - dice_for_iVOI: 0.9274
+Epoch 59/100
+400/400 - 510s - loss: 0.0104 - dice_for_iVOI: 0.9270
+Epoch 60/100
+400/400 - 510s - loss: 0.0106 - dice_for_iVOI: 0.9265
+Epoch 61/100
+400/400 - 510s - loss: 0.0130 - dice_for_iVOI: 0.9115
+Epoch 62/100
+400/400 - 510s - loss: 0.0109 - dice_for_iVOI: 0.9263
+Epoch 63/100
+400/400 - 510s - loss: 0.0106 - dice_for_iVOI: 0.9284
+Epoch 64/100
+400/400 - 510s - loss: 0.0103 - dice_for_iVOI: 0.9284
+Epoch 65/100
+400/400 - 510s - loss: 0.0103 - dice_for_iVOI: 0.9308
+Epoch 66/100
+400/400 - 510s - loss: 0.0101 - dice_for_iVOI: 0.9298
+Epoch 67/100
+400/400 - 510s - loss: 0.0105 - dice_for_iVOI: 0.9317
+Epoch 68/100
+400/400 - 510s - loss: 0.0102 - dice_for_iVOI: 0.9279
+Epoch 69/100
+400/400 - 510s - loss: 0.0100 - dice_for_iVOI: 0.9300
+Epoch 70/100
+400/400 - 510s - loss: 0.0102 - dice_for_iVOI: 0.9318
+Epoch 71/100
+400/400 - 510s - loss: 0.0097 - dice_for_iVOI: 0.9327
+Epoch 72/100
+400/400 - 510s - loss: 0.0095 - dice_for_iVOI: 0.9326
+Epoch 73/100
+400/400 - 510s - loss: 0.0097 - dice_for_iVOI: 0.9313
+Epoch 74/100
+400/400 - 510s - loss: 0.0126 - dice_for_iVOI: 0.9173
+Epoch 75/100
+400/400 - 510s - loss: 0.0102 - dice_for_iVOI: 0.9286
+Epoch 76/100
+400/400 - 510s - loss: 0.0099 - dice_for_iVOI: 0.9321
+Epoch 77/100
+400/400 - 510s - loss: 0.0095 - dice_for_iVOI: 0.9332
+Epoch 78/100
+400/400 - 510s - loss: 0.0094 - dice_for_iVOI: 0.9312
+Epoch 79/100
+400/400 - 510s - loss: 0.0094 - dice_for_iVOI: 0.9320
+Epoch 80/100
+400/400 - 510s - loss: 0.0156 - dice_for_iVOI: 0.9024
+Epoch 81/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9160
+Epoch 82/100
+400/400 - 510s - loss: 0.0102 - dice_for_iVOI: 0.9275
+Epoch 83/100
+400/400 - 510s - loss: 0.0100 - dice_for_iVOI: 0.9309
+Epoch 84/100
+400/400 - 510s - loss: 0.0100 - dice_for_iVOI: 0.9329
+Epoch 85/100
+400/400 - 510s - loss: 0.0101 - dice_for_iVOI: 0.9327
+Epoch 86/100
+400/400 - 510s - loss: 0.0097 - dice_for_iVOI: 0.9357
+Epoch 87/100
+400/400 - 510s - loss: 0.0093 - dice_for_iVOI: 0.9345
+Epoch 88/100
+400/400 - 510s - loss: 0.0096 - dice_for_iVOI: 0.9360
+Epoch 89/100
+400/400 - 510s - loss: 0.0094 - dice_for_iVOI: 0.9338
+Epoch 90/100
+400/400 - 510s - loss: 0.0092 - dice_for_iVOI: 0.9361
+Epoch 91/100
+400/400 - 510s - loss: 0.0091 - dice_for_iVOI: 0.9354
+Epoch 92/100
+400/400 - 510s - loss: 0.0094 - dice_for_iVOI: 0.9351
+Epoch 93/100
+400/400 - 510s - loss: 0.0092 - dice_for_iVOI: 0.9354
+Epoch 94/100
+400/400 - 510s - loss: 0.0091 - dice_for_iVOI: 0.9363
+Epoch 95/100
+400/400 - 510s - loss: 0.0093 - dice_for_iVOI: 0.9363
+Epoch 96/100
+400/400 - 510s - loss: 0.0096 - dice_for_iVOI: 0.9368
+Epoch 97/100
+400/400 - 510s - loss: 0.0089 - dice_for_iVOI: 0.9366
+Epoch 98/100
+400/400 - 510s - loss: 0.0090 - dice_for_iVOI: 0.9366
+Epoch 99/100
+400/400 - 510s - loss: 0.0087 - dice_for_iVOI: 0.9381
+Epoch 100/100
+400/400 - 510s - loss: 0.0151 - dice_for_iVOI: 0.9039
+2022-02-26 21:12:30.850640: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-26 21:12:30.855919: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 1 with properties: 
+pciBusID: 0000:82:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-26 21:12:30.857904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0, 1
+2022-02-26 21:12:30.857959: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-02-26 21:12:30.857971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 1 
+2022-02-26 21:12:30.857979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N N 
+2022-02-26 21:12:30.857987: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 1:   N N 
+2022-02-26 21:12:30.859370: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11158 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:03:00.0, compute capability: 6.0)
+2022-02-26 21:12:30.860087: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11158 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-12GB, pci bus id: 0000:82:00.0, compute capability: 6.0)
+training time: 50965.325066804886
+executation time:23.085308677271794
+---------fold--3---------
+training set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 57 58 59 60 61 62 63 64 65 66
+ 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+ 91 92 93 94]
+training set size:  76
+testing set:  [38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56]
+testing set size:  19
+..generator_len: 400
+..training_n_subject: 76
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 513s - loss: 0.1223 - dice_for_iVOI: 0.3788
+Epoch 2/100
+400/400 - 510s - loss: 0.0765 - dice_for_iVOI: 0.5669
+Epoch 3/100
+400/400 - 510s - loss: 0.0634 - dice_for_iVOI: 0.6473
+Epoch 4/100
+400/400 - 510s - loss: 0.0566 - dice_for_iVOI: 0.6865
+Epoch 5/100
+400/400 - 510s - loss: 0.0343 - dice_for_iVOI: 0.7893
+Epoch 6/100
+400/400 - 510s - loss: 0.0457 - dice_for_iVOI: 0.7433
+Epoch 7/100
+400/400 - 510s - loss: 0.0262 - dice_for_iVOI: 0.8277
+Epoch 8/100
+400/400 - 510s - loss: 0.0215 - dice_for_iVOI: 0.8681
+Epoch 9/100
+400/400 - 510s - loss: 0.0201 - dice_for_iVOI: 0.8726
+Epoch 10/100
+400/400 - 510s - loss: 0.0210 - dice_for_iVOI: 0.8684
+Epoch 11/100
+400/400 - 510s - loss: 0.0306 - dice_for_iVOI: 0.8284
+Epoch 12/100
+400/400 - 510s - loss: 0.0208 - dice_for_iVOI: 0.8730
+Epoch 13/100
+400/400 - 510s - loss: 0.0167 - dice_for_iVOI: 0.8882
+Epoch 14/100
+400/400 - 510s - loss: 0.0197 - dice_for_iVOI: 0.8785
+Epoch 15/100
+400/400 - 510s - loss: 0.0155 - dice_for_iVOI: 0.8926
+Epoch 16/100
+400/400 - 510s - loss: 0.0300 - dice_for_iVOI: 0.8352
+Epoch 17/100
+400/400 - 510s - loss: 0.0364 - dice_for_iVOI: 0.7856
+Epoch 18/100
+400/400 - 510s - loss: 0.0188 - dice_for_iVOI: 0.8843
+Epoch 19/100
+400/400 - 510s - loss: 0.0204 - dice_for_iVOI: 0.8756
+Epoch 20/100
+400/400 - 510s - loss: 0.0149 - dice_for_iVOI: 0.8977
+Epoch 21/100
+400/400 - 510s - loss: 0.0153 - dice_for_iVOI: 0.9026
+Epoch 22/100
+400/400 - 510s - loss: 0.0153 - dice_for_iVOI: 0.9025
+Epoch 23/100
+400/400 - 510s - loss: 0.0144 - dice_for_iVOI: 0.9050
+Epoch 24/100
+400/400 - 510s - loss: 0.0145 - dice_for_iVOI: 0.9061
+Epoch 25/100
+400/400 - 510s - loss: 0.0159 - dice_for_iVOI: 0.8995
+Epoch 26/100
+400/400 - 510s - loss: 0.0148 - dice_for_iVOI: 0.9042
+Epoch 27/100
+400/400 - 510s - loss: 0.0139 - dice_for_iVOI: 0.9105
+Epoch 28/100
+400/400 - 510s - loss: 0.0253 - dice_for_iVOI: 0.8479
+Epoch 29/100
+400/400 - 510s - loss: 0.0189 - dice_for_iVOI: 0.8887
+Epoch 30/100
+400/400 - 510s - loss: 0.0148 - dice_for_iVOI: 0.9019
+Epoch 31/100
+400/400 - 510s - loss: 0.0139 - dice_for_iVOI: 0.9101
+Epoch 32/100
+400/400 - 510s - loss: 0.0132 - dice_for_iVOI: 0.9106
+Epoch 33/100
+400/400 - 510s - loss: 0.0134 - dice_for_iVOI: 0.9143
+Epoch 34/100
+400/400 - 510s - loss: 0.0151 - dice_for_iVOI: 0.9044
+Epoch 35/100
+400/400 - 510s - loss: 0.0135 - dice_for_iVOI: 0.9122
+Epoch 36/100
+400/400 - 510s - loss: 0.0131 - dice_for_iVOI: 0.9156
+Epoch 37/100
+400/400 - 510s - loss: 0.0127 - dice_for_iVOI: 0.9163
+Epoch 38/100
+400/400 - 510s - loss: 0.0125 - dice_for_iVOI: 0.9166
+Epoch 39/100
+400/400 - 510s - loss: 0.0131 - dice_for_iVOI: 0.9114
+Epoch 40/100
+400/400 - 510s - loss: 0.0127 - dice_for_iVOI: 0.9155
+Epoch 41/100
+400/400 - 510s - loss: 0.0137 - dice_for_iVOI: 0.9111
+Epoch 42/100
+400/400 - 510s - loss: 0.0127 - dice_for_iVOI: 0.9163
+Epoch 43/100
+400/400 - 510s - loss: 0.0123 - dice_for_iVOI: 0.9172
+Epoch 44/100
+400/400 - 510s - loss: 0.0122 - dice_for_iVOI: 0.9201
+Epoch 45/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9205
+Epoch 46/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9185
+Epoch 47/100
+400/400 - 510s - loss: 0.0119 - dice_for_iVOI: 0.9188
+Epoch 48/100
+400/400 - 510s - loss: 0.0134 - dice_for_iVOI: 0.9174
+Epoch 49/100
+400/400 - 510s - loss: 0.0196 - dice_for_iVOI: 0.8838
+Epoch 50/100
+400/400 - 510s - loss: 0.0126 - dice_for_iVOI: 0.9163
+Epoch 51/100
+400/400 - 510s - loss: 0.0120 - dice_for_iVOI: 0.9186
+Epoch 52/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9216
+Epoch 53/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9215
+Epoch 54/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9228
+Epoch 55/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9213
+Epoch 56/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9206
+Epoch 57/100
+400/400 - 510s - loss: 0.0123 - dice_for_iVOI: 0.9190
+Epoch 58/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9243
+Epoch 59/100
+400/400 - 510s - loss: 0.0113 - dice_for_iVOI: 0.9237
+Epoch 60/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9246
+Epoch 61/100
+400/400 - 510s - loss: 0.0196 - dice_for_iVOI: 0.8914
+Epoch 62/100
+400/400 - 510s - loss: 0.0125 - dice_for_iVOI: 0.9180
+Epoch 63/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9225
+Epoch 64/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9248
+Epoch 65/100
+400/400 - 510s - loss: 0.0113 - dice_for_iVOI: 0.9241
+Epoch 66/100
+400/400 - 510s - loss: 0.0110 - dice_for_iVOI: 0.9253
+Epoch 67/100
+400/400 - 510s - loss: 0.0133 - dice_for_iVOI: 0.9093
+Epoch 68/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9229
+Epoch 69/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9250
+Epoch 70/100
+400/400 - 510s - loss: 0.0109 - dice_for_iVOI: 0.9260
+Epoch 71/100
+400/400 - 510s - loss: 0.0108 - dice_for_iVOI: 0.9258
+Epoch 72/100
+400/400 - 510s - loss: 0.0109 - dice_for_iVOI: 0.9262
+Epoch 73/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9275
+Epoch 74/100
+400/400 - 510s - loss: 0.0105 - dice_for_iVOI: 0.9257
+Epoch 75/100
+400/400 - 510s - loss: 0.0105 - dice_for_iVOI: 0.9265
+Epoch 76/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9259
+Epoch 77/100
+400/400 - 510s - loss: 0.0106 - dice_for_iVOI: 0.9268
+Epoch 78/100
+400/400 - 510s - loss: 0.0108 - dice_for_iVOI: 0.9264
+Epoch 79/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9265
+Epoch 80/100
+400/400 - 510s - loss: 0.0201 - dice_for_iVOI: 0.8922
+Epoch 81/100
+400/400 - 510s - loss: 0.0120 - dice_for_iVOI: 0.9215
+Epoch 82/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9242
+Epoch 83/100
+400/400 - 511s - loss: 0.0108 - dice_for_iVOI: 0.9262
+Epoch 84/100
+400/400 - 511s - loss: 0.0109 - dice_for_iVOI: 0.9295
+Epoch 85/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9287
+Epoch 86/100
+400/400 - 510s - loss: 0.0108 - dice_for_iVOI: 0.9286
+Epoch 87/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9308
+Epoch 88/100
+400/400 - 510s - loss: 0.0106 - dice_for_iVOI: 0.9304
+Epoch 89/100
+400/400 - 510s - loss: 0.0100 - dice_for_iVOI: 0.9295
+Epoch 90/100
+400/400 - 510s - loss: 0.0108 - dice_for_iVOI: 0.9272
+Epoch 91/100
+400/400 - 510s - loss: 0.0126 - dice_for_iVOI: 0.9193
+Epoch 92/100
+400/400 - 510s - loss: 0.0103 - dice_for_iVOI: 0.9284
+Epoch 93/100
+400/400 - 510s - loss: 0.0103 - dice_for_iVOI: 0.9311
+Epoch 94/100
+400/400 - 510s - loss: 0.0103 - dice_for_iVOI: 0.9300
+Epoch 95/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9287
+Epoch 96/100
+400/400 - 510s - loss: 0.0148 - dice_for_iVOI: 0.9136
+Epoch 97/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9209
+Epoch 98/100
+400/400 - 510s - loss: 0.0113 - dice_for_iVOI: 0.9273
+Epoch 99/100
+400/400 - 510s - loss: 0.0104 - dice_for_iVOI: 0.9295
+Epoch 100/100
+400/400 - 510s - loss: 0.0105 - dice_for_iVOI: 0.9289
+2022-02-27 11:30:02.030181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-27 11:30:02.041407: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 1 with properties: 
+pciBusID: 0000:82:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-27 11:30:02.043411: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0, 1
+2022-02-27 11:30:02.043471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-02-27 11:30:02.043484: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 1 
+2022-02-27 11:30:02.043493: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N N 
+2022-02-27 11:30:02.043501: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 1:   N N 
+2022-02-27 11:30:02.044915: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11158 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:03:00.0, compute capability: 6.0)
+2022-02-27 11:30:02.045623: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11158 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-12GB, pci bus id: 0000:82:00.0, compute capability: 6.0)
+training time: 51005.218579530716
+executation time:22.964961767196655
+---------fold--4---------
+training set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+ 91 92 93 94]
+training set size:  76
+testing set:  [57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75]
+testing set size:  19
+..generator_len: 400
+..training_n_subject: 76
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 513s - loss: 0.1221 - dice_for_iVOI: 0.4241
+Epoch 2/100
+400/400 - 510s - loss: 0.0712 - dice_for_iVOI: 0.5971
+Epoch 3/100
+400/400 - 510s - loss: 0.0627 - dice_for_iVOI: 0.6674
+Epoch 4/100
+400/400 - 510s - loss: 0.0522 - dice_for_iVOI: 0.7245
+Epoch 5/100
+400/400 - 510s - loss: 0.0376 - dice_for_iVOI: 0.7903
+Epoch 6/100
+400/400 - 510s - loss: 0.0329 - dice_for_iVOI: 0.8086
+Epoch 7/100
+400/400 - 510s - loss: 0.0244 - dice_for_iVOI: 0.8577
+Epoch 8/100
+400/400 - 510s - loss: 0.0252 - dice_for_iVOI: 0.8576
+Epoch 9/100
+400/400 - 510s - loss: 0.0225 - dice_for_iVOI: 0.8703
+Epoch 10/100
+400/400 - 510s - loss: 0.0194 - dice_for_iVOI: 0.8782
+Epoch 11/100
+400/400 - 510s - loss: 0.0174 - dice_for_iVOI: 0.8926
+Epoch 12/100
+400/400 - 510s - loss: 0.0163 - dice_for_iVOI: 0.8979
+Epoch 13/100
+400/400 - 510s - loss: 0.0235 - dice_for_iVOI: 0.8656
+Epoch 14/100
+400/400 - 510s - loss: 0.0281 - dice_for_iVOI: 0.8411
+Epoch 15/100
+400/400 - 510s - loss: 0.0330 - dice_for_iVOI: 0.8278
+Epoch 16/100
+400/400 - 510s - loss: 0.0214 - dice_for_iVOI: 0.8748
+Epoch 17/100
+400/400 - 510s - loss: 0.0166 - dice_for_iVOI: 0.8998
+Epoch 18/100
+400/400 - 510s - loss: 0.0153 - dice_for_iVOI: 0.9022
+Epoch 19/100
+400/400 - 509s - loss: 0.0151 - dice_for_iVOI: 0.9051
+Epoch 20/100
+400/400 - 510s - loss: 0.0159 - dice_for_iVOI: 0.9068
+Epoch 21/100
+400/400 - 509s - loss: 0.0159 - dice_for_iVOI: 0.9010
+Epoch 22/100
+400/400 - 510s - loss: 0.0150 - dice_for_iVOI: 0.9107
+Epoch 23/100
+400/400 - 510s - loss: 0.0148 - dice_for_iVOI: 0.9109
+Epoch 24/100
+400/400 - 510s - loss: 0.0149 - dice_for_iVOI: 0.9094
+Epoch 25/100
+400/400 - 510s - loss: 0.0137 - dice_for_iVOI: 0.9122
+Epoch 26/100
+400/400 - 510s - loss: 0.0189 - dice_for_iVOI: 0.8867
+Epoch 27/100
+400/400 - 510s - loss: 0.0166 - dice_for_iVOI: 0.8986
+Epoch 28/100
+400/400 - 510s - loss: 0.0147 - dice_for_iVOI: 0.9117
+Epoch 29/100
+400/400 - 510s - loss: 0.0142 - dice_for_iVOI: 0.9144
+Epoch 30/100
+400/400 - 510s - loss: 0.0140 - dice_for_iVOI: 0.9160
+Epoch 31/100
+400/400 - 510s - loss: 0.0140 - dice_for_iVOI: 0.9169
+Epoch 32/100
+400/400 - 510s - loss: 0.0137 - dice_for_iVOI: 0.9137
+Epoch 33/100
+400/400 - 510s - loss: 0.0189 - dice_for_iVOI: 0.8954
+Epoch 34/100
+400/400 - 510s - loss: 0.0135 - dice_for_iVOI: 0.9126
+Epoch 35/100
+400/400 - 510s - loss: 0.0132 - dice_for_iVOI: 0.9155
+Epoch 36/100
+400/400 - 510s - loss: 0.0130 - dice_for_iVOI: 0.9198
+Epoch 37/100
+400/400 - 510s - loss: 0.0134 - dice_for_iVOI: 0.9186
+Epoch 38/100
+400/400 - 510s - loss: 0.0132 - dice_for_iVOI: 0.9180
+Epoch 39/100
+400/400 - 510s - loss: 0.0134 - dice_for_iVOI: 0.9216
+Epoch 40/100
+400/400 - 510s - loss: 0.0126 - dice_for_iVOI: 0.9206
+Epoch 41/100
+400/400 - 510s - loss: 0.0128 - dice_for_iVOI: 0.9212
+Epoch 42/100
+400/400 - 510s - loss: 0.0123 - dice_for_iVOI: 0.9201
+Epoch 43/100
+400/400 - 510s - loss: 0.0128 - dice_for_iVOI: 0.9218
+Epoch 44/100
+400/400 - 510s - loss: 0.0149 - dice_for_iVOI: 0.9096
+Epoch 45/100
+400/400 - 510s - loss: 0.0250 - dice_for_iVOI: 0.8667
+Epoch 46/100
+400/400 - 510s - loss: 0.0152 - dice_for_iVOI: 0.9107
+Epoch 47/100
+400/400 - 510s - loss: 0.0133 - dice_for_iVOI: 0.9173
+Epoch 48/100
+400/400 - 510s - loss: 0.0128 - dice_for_iVOI: 0.9176
+Epoch 49/100
+400/400 - 510s - loss: 0.0124 - dice_for_iVOI: 0.9215
+Epoch 50/100
+400/400 - 510s - loss: 0.0119 - dice_for_iVOI: 0.9222
+Epoch 51/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9231
+Epoch 52/100
+400/400 - 510s - loss: 0.0127 - dice_for_iVOI: 0.9228
+Epoch 53/100
+400/400 - 510s - loss: 0.0122 - dice_for_iVOI: 0.9250
+Epoch 54/100
+400/400 - 510s - loss: 0.0124 - dice_for_iVOI: 0.9241
+Epoch 55/100
+400/400 - 510s - loss: 0.0119 - dice_for_iVOI: 0.9234
+Epoch 56/100
+400/400 - 510s - loss: 0.0155 - dice_for_iVOI: 0.9059
+Epoch 57/100
+400/400 - 510s - loss: 0.0132 - dice_for_iVOI: 0.9193
+Epoch 58/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9221
+Epoch 59/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9252
+Epoch 60/100
+400/400 - 510s - loss: 0.0120 - dice_for_iVOI: 0.9231
+Epoch 61/100
+400/400 - 510s - loss: 0.0119 - dice_for_iVOI: 0.9259
+Epoch 62/100
+400/400 - 510s - loss: 0.0119 - dice_for_iVOI: 0.9270
+Epoch 63/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9285
+Epoch 64/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9272
+Epoch 65/100
+400/400 - 510s - loss: 0.0113 - dice_for_iVOI: 0.9271
+Epoch 66/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9273
+Epoch 67/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9269
+Epoch 68/100
+400/400 - 510s - loss: 0.0110 - dice_for_iVOI: 0.9270
+Epoch 69/100
+400/400 - 510s - loss: 0.0125 - dice_for_iVOI: 0.9239
+Epoch 70/100
+400/400 - 510s - loss: 0.0132 - dice_for_iVOI: 0.9173
+Epoch 71/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9258
+Epoch 72/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9277
+Epoch 73/100
+400/400 - 510s - loss: 0.0168 - dice_for_iVOI: 0.9036
+Epoch 74/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9241
+Epoch 75/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9283
+Epoch 76/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9266
+Epoch 77/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9297
+Epoch 78/100
+400/400 - 510s - loss: 0.0109 - dice_for_iVOI: 0.9307
+Epoch 79/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9299
+Epoch 80/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9302
+Epoch 81/100
+400/400 - 510s - loss: 0.0110 - dice_for_iVOI: 0.9311
+Epoch 82/100
+400/400 - 510s - loss: 0.0110 - dice_for_iVOI: 0.9301
+Epoch 83/100
+400/400 - 510s - loss: 0.0109 - dice_for_iVOI: 0.9306
+Epoch 84/100
+400/400 - 510s - loss: 0.0124 - dice_for_iVOI: 0.9295
+Epoch 85/100
+400/400 - 510s - loss: 0.0138 - dice_for_iVOI: 0.9132
+Epoch 86/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9268
+Epoch 87/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9286
+Epoch 88/100
+400/400 - 510s - loss: 0.0124 - dice_for_iVOI: 0.9235
+Epoch 89/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9322
+Epoch 90/100
+400/400 - 510s - loss: 0.0104 - dice_for_iVOI: 0.9315
+Epoch 91/100
+400/400 - 510s - loss: 0.0104 - dice_for_iVOI: 0.9303
+Epoch 92/100
+400/400 - 510s - loss: 0.0106 - dice_for_iVOI: 0.9325
+Epoch 93/100
+400/400 - 510s - loss: 0.0102 - dice_for_iVOI: 0.9341
+Epoch 94/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9345
+Epoch 95/100
+400/400 - 510s - loss: 0.0105 - dice_for_iVOI: 0.9334
+Epoch 96/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9278
+Epoch 97/100
+400/400 - 510s - loss: 0.0134 - dice_for_iVOI: 0.9179
+Epoch 98/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9310
+Epoch 99/100
+400/400 - 510s - loss: 0.0113 - dice_for_iVOI: 0.9294
+Epoch 100/100
+400/400 - 510s - loss: 0.0108 - dice_for_iVOI: 0.9308
+2022-02-28 01:47:26.727796: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 0 with properties: 
+pciBusID: 0000:03:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-28 01:47:26.734642: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1734] Found device 1 with properties: 
+pciBusID: 0000:82:00.0 name: Tesla P100-PCIE-12GB computeCapability: 6.0
+coreClock: 1.3285GHz coreCount: 56 deviceMemorySize: 11.91GiB deviceMemoryBandwidth: 511.41GiB/s
+2022-02-28 01:47:26.736852: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1872] Adding visible gpu devices: 0, 1
+2022-02-28 01:47:26.736934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-02-28 01:47:26.736947: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 1 
+2022-02-28 01:47:26.736956: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N N 
+2022-02-28 01:47:26.736964: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 1:   N N 
+2022-02-28 01:47:26.738475: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11158 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-12GB, pci bus id: 0000:03:00.0, compute capability: 6.0)
+2022-02-28 01:47:26.739286: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11158 MB memory) -> physical GPU (device: 1, name: Tesla P100-PCIE-12GB, pci bus id: 0000:82:00.0, compute capability: 6.0)
+training time: 50999.14209842682
+executation time:22.92908141487523
+---------fold--5---------
+training set:  [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+ 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+ 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+ 72 73 74 75]
+training set size:  76
+testing set:  [76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97]
+testing set size:  22
+..generator_len: 400
+..training_n_subject: 76
+..training_n_patch_per_sub: 326592
+Epoch 1/100
+400/400 - 513s - loss: 0.1176 - dice_for_iVOI: 0.4238
+Epoch 2/100
+400/400 - 510s - loss: 0.0770 - dice_for_iVOI: 0.5857
+Epoch 3/100
+400/400 - 510s - loss: 0.0646 - dice_for_iVOI: 0.6550
+Epoch 4/100
+400/400 - 510s - loss: 0.0638 - dice_for_iVOI: 0.6694
+Epoch 5/100
+400/400 - 510s - loss: 0.0456 - dice_for_iVOI: 0.7657
+Epoch 6/100
+400/400 - 510s - loss: 0.0321 - dice_for_iVOI: 0.8176
+Epoch 7/100
+400/400 - 510s - loss: 0.0278 - dice_for_iVOI: 0.8399
+Epoch 8/100
+400/400 - 510s - loss: 0.0351 - dice_for_iVOI: 0.8185
+Epoch 9/100
+400/400 - 510s - loss: 0.0274 - dice_for_iVOI: 0.8489
+Epoch 10/100
+400/400 - 510s - loss: 0.0196 - dice_for_iVOI: 0.8868
+Epoch 11/100
+400/400 - 510s - loss: 0.0178 - dice_for_iVOI: 0.8938
+Epoch 12/100
+400/400 - 510s - loss: 0.0180 - dice_for_iVOI: 0.8986
+Epoch 13/100
+400/400 - 510s - loss: 0.0164 - dice_for_iVOI: 0.8996
+Epoch 14/100
+400/400 - 510s - loss: 0.0184 - dice_for_iVOI: 0.8902
+Epoch 15/100
+400/400 - 510s - loss: 0.0167 - dice_for_iVOI: 0.9030
+Epoch 16/100
+400/400 - 509s - loss: 0.0283 - dice_for_iVOI: 0.8556
+Epoch 17/100
+400/400 - 510s - loss: 0.0234 - dice_for_iVOI: 0.8691
+Epoch 18/100
+400/400 - 510s - loss: 0.0161 - dice_for_iVOI: 0.9021
+Epoch 19/100
+400/400 - 510s - loss: 0.0153 - dice_for_iVOI: 0.9100
+Epoch 20/100
+400/400 - 510s - loss: 0.0151 - dice_for_iVOI: 0.9105
+Epoch 21/100
+400/400 - 510s - loss: 0.0161 - dice_for_iVOI: 0.9043
+Epoch 22/100
+400/400 - 510s - loss: 0.0154 - dice_for_iVOI: 0.9099
+Epoch 23/100
+400/400 - 510s - loss: 0.0142 - dice_for_iVOI: 0.9148
+Epoch 24/100
+400/400 - 509s - loss: 0.0136 - dice_for_iVOI: 0.9153
+Epoch 25/100
+400/400 - 509s - loss: 0.0152 - dice_for_iVOI: 0.9087
+Epoch 26/100
+400/400 - 510s - loss: 0.0192 - dice_for_iVOI: 0.8880
+Epoch 27/100
+400/400 - 510s - loss: 0.0237 - dice_for_iVOI: 0.8848
+Epoch 28/100
+400/400 - 510s - loss: 0.0241 - dice_for_iVOI: 0.8860
+Epoch 29/100
+400/400 - 510s - loss: 0.0164 - dice_for_iVOI: 0.9051
+Epoch 30/100
+400/400 - 510s - loss: 0.0147 - dice_for_iVOI: 0.9124
+Epoch 31/100
+400/400 - 509s - loss: 0.0202 - dice_for_iVOI: 0.8972
+Epoch 32/100
+400/400 - 510s - loss: 0.0147 - dice_for_iVOI: 0.9113
+Epoch 33/100
+400/400 - 510s - loss: 0.0139 - dice_for_iVOI: 0.9156
+Epoch 34/100
+400/400 - 510s - loss: 0.0138 - dice_for_iVOI: 0.9207
+Epoch 35/100
+400/400 - 510s - loss: 0.0213 - dice_for_iVOI: 0.8914
+Epoch 36/100
+400/400 - 510s - loss: 0.0138 - dice_for_iVOI: 0.9150
+Epoch 37/100
+400/400 - 510s - loss: 0.0141 - dice_for_iVOI: 0.9190
+Epoch 38/100
+400/400 - 510s - loss: 0.0135 - dice_for_iVOI: 0.9196
+Epoch 39/100
+400/400 - 510s - loss: 0.0135 - dice_for_iVOI: 0.9178
+Epoch 40/100
+400/400 - 510s - loss: 0.0131 - dice_for_iVOI: 0.9186
+Epoch 41/100
+400/400 - 510s - loss: 0.0140 - dice_for_iVOI: 0.9210
+Epoch 42/100
+400/400 - 510s - loss: 0.0132 - dice_for_iVOI: 0.9217
+Epoch 43/100
+400/400 - 510s - loss: 0.0127 - dice_for_iVOI: 0.9217
+Epoch 44/100
+400/400 - 510s - loss: 0.0129 - dice_for_iVOI: 0.9218
+Epoch 45/100
+400/400 - 510s - loss: 0.0129 - dice_for_iVOI: 0.9233
+Epoch 46/100
+400/400 - 510s - loss: 0.0132 - dice_for_iVOI: 0.9233
+Epoch 47/100
+400/400 - 510s - loss: 0.0137 - dice_for_iVOI: 0.9172
+Epoch 48/100
+400/400 - 510s - loss: 0.0126 - dice_for_iVOI: 0.9232
+Epoch 49/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9246
+Epoch 50/100
+400/400 - 510s - loss: 0.0151 - dice_for_iVOI: 0.9138
+Epoch 51/100
+400/400 - 510s - loss: 0.0124 - dice_for_iVOI: 0.9230
+Epoch 52/100
+400/400 - 510s - loss: 0.0122 - dice_for_iVOI: 0.9241
+Epoch 53/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9249
+Epoch 54/100
+400/400 - 510s - loss: 0.0125 - dice_for_iVOI: 0.9244
+Epoch 55/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9252
+Epoch 56/100
+400/400 - 510s - loss: 0.0130 - dice_for_iVOI: 0.9245
+Epoch 57/100
+400/400 - 510s - loss: 0.0122 - dice_for_iVOI: 0.9274
+Epoch 58/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9296
+Epoch 59/100
+400/400 - 509s - loss: 0.0115 - dice_for_iVOI: 0.9294
+Epoch 60/100
+400/400 - 510s - loss: 0.0242 - dice_for_iVOI: 0.8844
+Epoch 61/100
+400/400 - 510s - loss: 0.0142 - dice_for_iVOI: 0.9149
+Epoch 62/100
+400/400 - 510s - loss: 0.0123 - dice_for_iVOI: 0.9245
+Epoch 63/100
+400/400 - 510s - loss: 0.0126 - dice_for_iVOI: 0.9256
+Epoch 64/100
+400/400 - 510s - loss: 0.0118 - dice_for_iVOI: 0.9290
+Epoch 65/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9283
+Epoch 66/100
+400/400 - 510s - loss: 0.0121 - dice_for_iVOI: 0.9272
+Epoch 67/100
+400/400 - 510s - loss: 0.0149 - dice_for_iVOI: 0.9148
+Epoch 68/100
+400/400 - 510s - loss: 0.0140 - dice_for_iVOI: 0.9151
+Epoch 69/100
+400/400 - 510s - loss: 0.0128 - dice_for_iVOI: 0.9280
+Epoch 70/100
+400/400 - 510s - loss: 0.0123 - dice_for_iVOI: 0.9276
+Epoch 71/100
+400/400 - 510s - loss: 0.0120 - dice_for_iVOI: 0.9282
+Epoch 72/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9292
+Epoch 73/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9317
+Epoch 74/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9284
+Epoch 75/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9273
+Epoch 76/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9338
+Epoch 77/100
+400/400 - 510s - loss: 0.0161 - dice_for_iVOI: 0.9116
+Epoch 78/100
+400/400 - 510s - loss: 0.0125 - dice_for_iVOI: 0.9258
+Epoch 79/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9305
+Epoch 80/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9294
+Epoch 81/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9307
+Epoch 82/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9317
+Epoch 83/100
+400/400 - 510s - loss: 0.0114 - dice_for_iVOI: 0.9327
+Epoch 84/100
+400/400 - 510s - loss: 0.0110 - dice_for_iVOI: 0.9315
+Epoch 85/100
+400/400 - 510s - loss: 0.0110 - dice_for_iVOI: 0.9338
+Epoch 86/100
+400/400 - 510s - loss: 0.0113 - dice_for_iVOI: 0.9338
+Epoch 87/100
+400/400 - 510s - loss: 0.0107 - dice_for_iVOI: 0.9329
+Epoch 88/100
+400/400 - 510s - loss: 0.0109 - dice_for_iVOI: 0.9328
+Epoch 89/100
+400/400 - 510s - loss: 0.0111 - dice_for_iVOI: 0.9347
+Epoch 90/100
+400/400 - 510s - loss: 0.0193 - dice_for_iVOI: 0.9019
+Epoch 91/100
+400/400 - 510s - loss: 0.0134 - dice_for_iVOI: 0.9200
+Epoch 92/100
+400/400 - 510s - loss: 0.0120 - dice_for_iVOI: 0.9292
+Epoch 93/100
+400/400 - 510s - loss: 0.0117 - dice_for_iVOI: 0.9289
+Epoch 94/100
+400/400 - 510s - loss: 0.0116 - dice_for_iVOI: 0.9318
+Epoch 95/100
+400/400 - 510s - loss: 0.0115 - dice_for_iVOI: 0.9323
+Epoch 96/100
+400/400 - 510s - loss: 0.0110 - dice_for_iVOI: 0.9343
+Epoch 97/100
+400/400 - 510s - loss: 0.0109 - dice_for_iVOI: 0.9354
+Epoch 98/100
+400/400 - 510s - loss: 0.0128 - dice_for_iVOI: 0.9281
+Epoch 99/100
+400/400 - 510s - loss: 0.0112 - dice_for_iVOI: 0.9331
+Epoch 100/100
+400/400 - 510s - loss: 0.0106 - dice_for_iVOI: 0.9351
+training time: 50973.53983783722
+executation time:23.056442033160817
+[0.99926436 0.9443898 ]

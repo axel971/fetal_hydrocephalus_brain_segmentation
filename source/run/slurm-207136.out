@@ -1,0 +1,9 @@
+U-Net
+[33mWARNING:[0m NVIDIA binaries may not be bound with --writable
+Traceback (most recent call last):
+  File "../examples/main_cross_validation_U-Net.py", line 4, in <module>
+    from model.model import unet3d
+  File "/home/axel/dev/fetal_hydrocephalus_segmentation/source/model/model.py", line 346
+    l3 = Res_block_2D(l2, stride_first_layer = 1, filter_size_1 = 64, kernel_size_1 = (1, 1), filter_size_2 = 64, kernel_size_2 = (3, 3), filter_size_3 = 256, kernel_size_3 = (1, 1)))
+                                                                                                                                                                                      ^
+SyntaxError: unmatched ')'
